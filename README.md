@@ -1706,6 +1706,152 @@ Overall, the Mediator Pattern is a useful pattern for managing complex interacti
 -----------------------------------------------------------------------------------
 </br>
 
+### Q-Facade Pattern?
+The Facade pattern is a design pattern in software engineering that provides a simplified interface to a complex system of classes, functions, and interfaces. The purpose of the Facade pattern is to hide the complexity of the system and provide a simple and easy-to-use interface for clients.
+
+The Facade pattern is used when you have a complex system with a large number of components, and you want to provide a simpler interface for clients to use. Instead of exposing all the details of the system, you create a facade that encapsulates the complexity and provides a simplified interface.
+
+The Facade pattern consists of the following components:
+
+Facade: This is the simplified interface that clients use to access the system. It provides a higher-level abstraction of the system and hides the complexity of the components.
+
+Subsystems: These are the components that make up the system. They are the individual classes, functions, and interfaces that provide the functionality of the system.
+
+The Facade pattern provides several benefits:
+
+Simplified interface: By providing a simplified interface to a complex system, the Facade pattern makes it easier for clients to use the system.
+
+Improved maintainability: By hiding the complexity of the system behind a facade, the Facade pattern makes the system easier to maintain and modify.
+
+Reduced coupling: The Facade pattern reduces coupling between the client and the subsystem, making it easier to replace or modify components of the system without affecting the clients.
+
+Improved performance: By providing a simplified interface and reducing the number of calls to the subsystem, the Facade pattern can improve performance.
+
+In summary, the Facade pattern is a useful design pattern in software engineering that provides a simplified interface to a complex system. By hiding the complexity of the system behind a facade, the Facade pattern improves maintainability, reduces coupling, and provides a simpler and more intuitive interface for clients.
+
+-----------------------------------------------------------------------------------
+</br>
+
+### Q-Proxy Pattern?
+The Proxy pattern is a design pattern in software engineering that provides a surrogate or placeholder for another object to control access to it. The purpose of the Proxy pattern is to provide a layer of indirection between clients and an object, allowing for additional functionality to be added without changing the object's interface.
+
+The Proxy pattern is used when you want to control access to an object or add additional functionality to an object's methods without changing the object's interface. The Proxy pattern consists of the following components:
+
+Subject: This is the interface that the client interacts with. It defines the methods that the client can call on the object.
+
+Real Subject: This is the actual object that the client wants to use. It implements the methods defined in the Subject interface.
+
+Proxy: This is the object that controls access to the Real Subject. It implements the same interface as the Real Subject, and it intercepts calls from the client to the Real Subject.
+
+The Proxy pattern provides several benefits:
+
+Control access to an object: The Proxy pattern allows you to control access to an object by limiting the methods that the client can call on the object.
+
+Add additional functionality: The Proxy pattern allows you to add additional functionality to an object's methods without changing the object's interface.
+
+Improved performance: The Proxy pattern can improve performance by delaying the creation of an object until it is actually needed.
+
+Improved security: The Proxy pattern can improve security by controlling access to sensitive objects.
+
+In summary, the Proxy pattern is a useful design pattern in software engineering that provides a layer of indirection between clients and objects. By controlling access to objects and adding additional functionality to their methods, the Proxy pattern can improve performance, security, and maintainability.
+
+-----------------------------------------------------------------------------------
+</br>
+
+### Q-Different between Proxy Pattern and Facade Pattern?
+Although both the Proxy pattern and the Facade pattern provide a layer of abstraction between the client and an underlying system, they serve different purposes.
+
+The Facade pattern provides a simplified interface to a complex system, while the Proxy pattern provides a surrogate or placeholder for another object to control access to it.
+
+The Facade pattern is used when you want to provide a simplified interface to a complex system of classes, functions, and interfaces. It encapsulates the complexity of the system and provides a higher-level abstraction of it to clients. The Facade pattern is typically used to improve the ease of use, maintainability, and flexibility of the system.
+
+On the other hand, the Proxy pattern is used when you want to control access to an object or add additional functionality to an object's methods without changing the object's interface. It provides a layer of indirection between clients and an object, allowing you to limit access to the object or modify its behavior.
+
+In summary, the main difference between the Proxy pattern and the Facade pattern is that the Proxy pattern provides a surrogate or placeholder for another object to control access to it, while the Facade pattern provides a simplified interface to a complex system.
+
+-----------------------------------------------------------------------------------
+</br>
+
+### Q-Observal Pattern?
+The Observer pattern is a design pattern in software engineering that allows objects to be notified of changes to the state of other objects without being tightly coupled to them. The purpose of the Observer pattern is to define a one-to-many dependency between objects, so that when one object changes its state, all its dependent objects are notified and updated automatically.
+
+The Observer pattern consists of the following components:
+
+Subject: This is the object that is being observed. It maintains a list of its dependent objects (called observers), and notifies them automatically when its state changes.
+
+Observer: This is the object that is notified of changes to the state of the subject. It implements a method that is called by the subject when its state changes.
+
+The Observer pattern provides several benefits:
+
+Loose coupling: The Observer pattern reduces coupling between the subject and its observers, allowing them to be changed independently of each other.
+
+Easy extensibility: The Observer pattern makes it easy to add new observers to the subject, allowing for easy extensibility of the system.
+
+Easy debugging: The Observer pattern makes it easy to debug the system, as changes to the state of the subject can be traced through the observers.
+
+Improved maintainability: The Observer pattern improves maintainability by reducing the complexity of the system and making it easier to modify.
+
+In summary, the Observer pattern is a useful design pattern in software engineering that allows objects to be notified of changes to the state of other objects without being tightly coupled to them. By defining a one-to-many dependency between objects, the Observer pattern reduces coupling, improves maintainability, and makes it easy to extend and debug the system.
+
+-----------------------------------------------------------------------------------
+</br>
+
+### Q-Staretgy pattern
+The Strategy pattern is a behavioral design pattern in object-oriented programming that allows you to define a family of algorithms, encapsulate each one as an object, and make them interchangeable. This pattern enables the behavior of an object to be selected at runtime, without the client code having to know the details of how that behavior is implemented.
+
+The Strategy pattern typically consists of three main components:
+
+Context: This is the object that needs to perform a particular behavior, and it contains a reference to a Strategy object.
+
+Strategy: This is an interface or abstract class that defines the behavior that needs to be performed.
+
+Concrete Strategy: These are the classes that implement the Strategy interface, and provide a specific implementation of the behavior.
+
+By using the Strategy pattern, you can easily switch between different algorithms or behaviors at runtime, without having to modify the code of the Context object. This makes the code more flexible and easier to maintain, since each behavior is encapsulated within a separate object. The Strategy pattern is commonly used in scenarios where you have multiple variations of a particular algorithm, and you need to select the appropriate one dynamically based on some runtime condition.
+
+-----------------------------------------------------------------------------------
+</br>
+
+### Q-Factory pattern
+ The Factory pattern is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created. This pattern is useful when you want to create objects without exposing the instantiation logic to the client code, and also when you want to centralize object creation in a single location to simplify the code.
+
+The Factory pattern typically consists of the following components:
+
+Creator: This is an abstract class or interface that declares the factory method, which returns an object of a product type.
+
+Concrete Creator: These are the classes that implement the factory method and create the product objects.
+
+Product: This is the interface or abstract class that defines the type of object that will be created by the factory method.
+
+Concrete Product: These are the classes that implement the Product interface, and provide a specific implementation of the product.
+
+Using the Factory pattern, the client code only interacts with the Creator class, and does not have to know about the concrete product classes. The Creator class encapsulates the object creation process, and delegates it to the Concrete Creator classes based on some condition. This allows the client code to be decoupled from the object creation process, and also makes it easier to add new products or change the object creation process in the future.
+
+Overall, the Factory pattern provides a flexible way to create objects, and is commonly used in scenarios where the client code needs to create objects dynamically at runtime, or when the creation of objects is complex and needs to be abstracted away from the client code.
+
+-----------------------------------------------------------------------------------
+</br>
+
+### Q-Abstract factory pattern 
+The Abstract Factory pattern is a creational design pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes. This pattern is useful when you want to create multiple objects that are related or dependent on each other, and you want to ensure that they are created in a consistent way.
+
+The Abstract Factory pattern typically consists of the following components:
+
+Abstract Factory: This is an abstract class or interface that declares a set of factory methods for creating related or dependent objects.
+
+Concrete Factory: These are the classes that implement the Abstract Factory interface and create the related or dependent objects.
+
+Abstract Product: This is an abstract class or interface that declares the common interface for a set of related or dependent products.
+
+Concrete Product: These are the classes that implement the Abstract Product interface and provide a specific implementation of the product.
+
+Using the Abstract Factory pattern, the client code only interacts with the Abstract Factory and Abstract Product interfaces, and does not have to know about the concrete classes. The Abstract Factory encapsulates the creation of related or dependent objects, and delegates it to the Concrete Factory classes based on some condition. This allows the client code to be decoupled from the object creation process, and also makes it easier to add new products or change the object creation process in the future.
+
+Overall, the Abstract Factory pattern provides a flexible way to create families of related or dependent objects, and is commonly used in scenarios where the client code needs to create objects dynamically at runtime, or when the creation of objects is complex and needs to be abstracted away from the client code.
+
+-----------------------------------------------------------------------------------
+</br>
+
 ## **Software Architecture**
 ### Q-Different between Architecture and design pattern?
 Architecture and design patterns are related concepts in software development, but they refer to different things.
@@ -1741,7 +1887,7 @@ Overall, Onion Architecture is a useful pattern for building scalable, maintaina
 -----------------------------------------------------------------------------------
 </br>
 
-### Layres in onion architecture
+### Q-Layres in onion architecture
 In Onion Architecture, the layers are organized in a concentric circle around the core, with the innermost layer containing the most important business logic, and the outermost layer containing the least important or infrastructure-related logic. Here are the layers typically used in Onion Architecture:
 
 Core: This is the center of the architecture, where the most important business logic is located. The Core layer is independent of the other layers, and contains the entities, business rules, and interfaces that define the application's behavior.
@@ -1777,7 +1923,7 @@ Overall, Clean Architecture is a useful pattern for building software systems th
 -----------------------------------------------------------------------------------
 </br>
 
-### Layres in Clean architecture
+### Q-Layres in Clean architecture
 
 In Clean Architecture, the layers are organized in a way that emphasizes the separation of concerns and the independence of the business logic from the technical details of the system. Here are the layers typically used in Clean Architecture:
 
@@ -1794,14 +1940,24 @@ Overall, the Clean Architecture layers are organized in a way that emphasizes th
 -----------------------------------------------------------------------------------
 </br>
 
-### What is DDD? (Domain-Driven Design)
-DDD stands for Domain-Driven Design, which is an approach to software development that emphasizes the importance of understanding the domain or business problem that the software is meant to solve. DDD is based on the idea that the domain is the most important part of a software system, and that the design of the system should be driven by the domain.
+### Q-What is DDD? (Domain-Driven Design)
+DDD stands for Domain-Driven Design, which is an approach to software development that focuses on designing software based on the business domain and its requirements. The main goal of DDD is to create software that reflects the business domain as closely as possible, and to make it easier to understand and maintain.
 
-DDD provides a set of principles and patterns that can help developers to create software that is more closely aligned with the business problem it is meant to solve. 
+The key principles of DDD include:
 
-One of the key benefits of DDD is that it can help to create a shared understanding of the domain between business stakeholders and technical team members. This shared understanding can help to reduce the risk of miscommunication and ensure that the software system meets the needs of the business.
+Ubiquitous Language: DDD emphasizes the importance of establishing a common language between developers and business stakeholders that accurately reflects the business domain. This helps to ensure that the software reflects the business requirements and is easier to understand and maintain.
 
-DDD is not a specific technology or tool, but rather a set of principles and practices that can be applied to any software development project. However, there are tools and frameworks available that can help to implement DDD concepts in practice, such as event sourcing, CQRS, and domain-specific languages.
+Bounded Contexts: DDD defines Bounded Contexts as a way of dividing a large, complex system into smaller, more manageable pieces. Each Bounded Context has its own language, models, and rules that reflect the specific requirements of that part of the system.
+
+Aggregates: DDD defines Aggregates as a way of grouping related entities and value objects together into a single unit of consistency. Aggregates are used to enforce business rules and ensure that the data is consistent and valid.
+
+Entities and Value Objects: DDD distinguishes between Entities, which have a unique identity and can change over time, and Value Objects, which represent a specific value or concept and are immutable.
+
+Domain Events: DDD emphasizes the use of Domain Events as a way of capturing and responding to changes in the system. Domain Events are used to trigger actions and update other parts of the system in response to changes in the domain.
+
+DDD also places a strong emphasis on collaboration between developers and business stakeholders, with the goal of creating software that accurately reflects the business domain and its requirements.
+
+In summary, DDD is an approach to software development that focuses on designing software based on the business domain and its requirements. By emphasizing a common language, Bounded Contexts, Aggregates, Entities and Value Objects, Domain Events, and collaboration between developers and business stakeholders, DDD helps to create software that is easier to understand, maintain, and modify over time.
 
 --------------------------------------------------------------------------------------------------------------------------
 </br>
@@ -1877,3 +2033,85 @@ Overall, these principles can help developers create more maintainable, efficien
 
 ## **Front end**
 ### What is angular ? and life cycle hocks?
+Angular is a popular open-source web application framework used for building complex and dynamic single-page applications. It is developed and maintained by Google and provides a complete solution for building client-side applications, including components, services, routing, and data binding.
+
+Angular has a concept called "lifecycle hooks" that allows you to tap into certain moments in the lifecycle of a component or directive. These hooks enable you to execute your own custom code at specific points in the component or directive's life cycle.
+
+Angular provides eight lifecycle hooks:
+
+ngOnChanges: This hook is called whenever the input properties of a component change. It receives a SimpleChanges object that contains information about the changed properties.
+
+ngOnInit: This hook is called after the first ngOnChanges hook and once the component is initialized. It is the perfect place to initialize data and make API calls.
+
+ngDoCheck: This hook is called whenever Angular detects a change that is not triggered by an input property. It is used for custom change detection and optimization.
+
+ngAfterContentInit: This hook is called after the content of a component or directive is initialized. It is used to perform operations on the content of the component.
+
+ngAfterContentChecked: This hook is called after the content of a component or directive is checked for changes. It is used to perform operations on the content of the component.
+
+ngAfterViewInit: This hook is called after the view of a component or directive is initialized. It is used to perform operations on the view of the component.
+
+ngAfterViewChecked: This hook is called after the view of a component or directive is checked for changes. It is used to perform operations on the view of the component.
+
+ngOnDestroy: This hook is called just before the component or directive is destroyed. It is used to clean up resources like event listeners, subscriptions, or timers.
+
+Using lifecycle hooks, you can add behavior to your components or directives at specific moments in their lifecycle, giving you more control and flexibility over their behavior.
+
+--------------------------------------------------------------------------------------------------------------------------
+</br>
+
+### What is NGRX? and what's it solved ? and state managment ? 
+NGRX is a library for state management in Angular applications, which is inspired by the Redux pattern. It provides a predictable and centralized way of managing application state, making it easier to develop, test, and maintain complex applications.
+
+State management refers to the way an application manages and updates its state or data, including user input, server responses, and other changes. As an application grows in size and complexity, managing state can become challenging, leading to bugs and errors.
+
+NGRX solves this problem by providing a set of tools and techniques for managing application state. It introduces the concept of a "store" that holds the state of the application and can be updated using "actions". Reducers are used to process these actions and update the state in the store. Components can then subscribe to the store to receive updates when the state changes.
+
+The benefits of using NGRX for state management include:
+
+Centralized state management: By using a centralized store to manage application state, NGRX provides a single source of truth for the entire application.
+
+Predictable state changes: NGRX ensures that state changes are predictable and occur in a consistent way, making it easier to debug and maintain the application.
+
+Improved performance: By using immutable data structures, NGRX can improve performance by reducing the number of unnecessary updates.
+
+Easy testing: NGRX provides a clear separation between state management and UI components, making it easier to test the application logic.
+
+Scalability: NGRX is designed to work with large and complex applications, making it easier to scale the application as it grows.
+
+In summary, NGRX is a powerful tool for managing application state in Angular applications. By providing a predictable and centralized way of managing state, NGRX can help to improve performance, maintainability, and scalability of the application.
+
+--------------------------------------------------------------------------------------------------------------------------
+</br>
+
+### What is directive  ? 
+In Angular, a directive is a special type of component that allows you to add custom behavior to an existing DOM element, attribute, or component. Directives are used to manipulate the behavior of the DOM, and they are defined using the @Directive decorator.
+
+There are three types of directives in Angular:
+
+Component Directive: A component directive is a special type of directive that has its own view, and it can be used as a standalone element in the application. In other words, a component is a directive with a template.
+
+Attribute Directive: An attribute directive is a directive that modifies the behavior of an existing DOM element by adding or removing attributes. For example, the ngClass directive can be used to add or remove CSS classes from an element.
+
+Structural Directive: A structural directive is a directive that modifies the structure of the DOM by adding or removing elements. For example, the ngFor directive can be used to repeat a set of elements based on an array.
+
+Directives are an essential part of Angular, and they allow you to extend the HTML language with custom functionality. By using directives, you can create reusable components that can be easily shared across multiple parts of your application, making your code more modular and maintainable.
+
+--------------------------------------------------------------------------------------------------------------------------
+</br>
+
+### What is Pipe  ? 
+In Angular, a pipe is a way to transform data in a template before it is displayed to the user. Pipes are defined using the @Pipe decorator and can be used with interpolation {{}} or the ngFor directive.
+
+Pipes allow you to format and transform data in a way that is easy to use and understand. For example, you can use the DatePipe to format a date into a specific format, or the DecimalPipe to format a number with a specific number of decimal places.
+
+There are two types of pipes in Angular:
+
+Pure pipes: Pure pipes are the most common type of pipe, and they are called only when the input value changes. They do not have any side effects and always return the same output for a given input.
+
+Impure pipes: Impure pipes are called on every change detection cycle, even if the input value has not changed. They can have side effects and are not recommended for use in performance-critical scenarios.
+
+You can also create custom pipes to perform custom transformations on data. Custom pipes can be used to encapsulate complex logic or calculations and make them easier to use and understand.
+
+In summary, pipes are a powerful feature of Angular that allow you to transform data in a template before it is displayed to the user. By using pipes, you can format and manipulate data in a way that is easy to use and understand, making your application more flexible and maintainable.
+
