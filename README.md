@@ -1,7 +1,7 @@
 # Common-Interview-Questions-And-Answers (All Examples using C# language)
 ## **General Topics:**
 -----------------------------------------------------------------------------------
-### Q- What is Casting and type of casting in C#?
+### Q- What is Casting and type of casting in C#? (With)
 Casting is the process of converting a value from one data type to another in C#. There are several types of casting that you can use to convert values:
 
 Implicit Casting: This is when the compiler automatically converts a value from one type to another, if it can be done safely. For example, you can implicitly cast an int to a double, because there is no loss of precision.
@@ -35,7 +35,7 @@ In the above example, we use implicit casting to convert an int to a double, and
 Casting is a powerful tool in C#, but it should be used with care, as it can lead to unexpected results if not used properly. It is important to understand the limitations of each type of casting, and to be mindful of potential data loss or type mismatches when converting values.
 
 -----------------------------------------------------------------------------------
-### Q- object obj = null; (C#)
+### Q- object obj = null; (C#) (With)
 ### - int d = (int)obj;
 ### - int d = obj as int ;
 ### - int d = Int64.Parse(obj);
@@ -61,7 +61,7 @@ int d = obj is int;: This is a type check that returns false, because obj is not
 In general, it's important to be careful when casting, parsing or checking the type of null references, because these operations can throw exceptions or return unexpected results. It's a good practice to check if an object is null before attempting to cast, parse or use it, to avoid null reference exceptions.
 
 -----------------------------------------------------------------------------------
-### Q - What's Ref key and out Key in C# ?
+### Q - What's Ref key and out Key in C# ? (With)
 In C#, ref and out are keywords that are used to pass arguments by reference in a method call. Here's what each of them does:
 
 ref keyword: The ref keyword is used to pass a parameter by reference to a method. This means that any changes made to the parameter inside the method will be reflected outside the method as well. The variable passed with ref must be initialized before it is passed.
@@ -102,7 +102,7 @@ Note that when using out, the method must assign a value to the output parameter
 </br>
 
 ## **OOP:**
-### Q- What is OOP?
+### Q- What is OOP? (With)
 
 OOP stands for Object-Oriented Programming. It is a programming paradigm or style of programming that is based on the concept of "objects" which can contain data and code to manipulate that data.
 
@@ -115,7 +115,7 @@ OOP provides several benefits, including code reusability, encapsulation, and th
 **ْNote** : In short anything in my project I treat it as an object
 
 -----------------------------------------------------------------------------------
-###  Q- What is OOP Types ?
+###  Q- What is OOP Types ? (With)
 In C#, there are four main types of OOP. These are:
 
 1-Abstraction
@@ -137,7 +137,7 @@ Method overloading allows multiple methods to have the same name, but with diffe
 In conclusion, these four types of OOP principles are crucial in designing efficient and maintainable software systems in C#. Abstraction, encapsulation, inheritance, and polymorphism help to achieve code reusability, code efficiency, and maintainability.
 
 -----------------------------------------------------------------------------------
-### Q - Difference between Abstraction and Encapsulation?
+### Q - Difference between Abstraction and Encapsulation? (With)
 Abstraction and Encapsulation are two important concepts in Object-Oriented Programming (OOP) that are often confused with each other, but they are different in terms of their meaning and implementation.
 
 Abstraction is the process of hiding unnecessary details while exposing only the essential features of an object. It is achieved by defining abstract classes and interfaces that define the contract for the behavior of the object, without specifying how the behavior is implemented. Abstraction provides a way to represent complex systems in a simplified manner, allowing developers to focus on the most important aspects of the system. It helps to reduce complexity and increase maintainability of the code.
@@ -147,7 +147,7 @@ On the other hand, Encapsulation is the practice of wrapping data and methods in
 In summary, the key difference between Abstraction and Encapsulation is that Abstraction focuses on hiding unnecessary details and providing a simplified view of the object, while Encapsulation focuses on hiding the implementation details and providing a clear separation between the interface and the implementation. Both Abstraction and Encapsulation are important principles in OOP that help to achieve code reusability, code efficiency, and maintainability.
 
 -----------------------------------------------------------------------------------
-### Q - What's dynamic polymarphism?
+### Q - What's dynamic polymarphism? (With)
 Dynamic Polymorphism, also known as runtime polymorphism or late binding, is a concept in Object-Oriented Programming (OOP) that allows an object to take on many forms at runtime. It is achieved through method overriding, which enables a derived class to provide its own implementation of a method that is already defined in its base class.
 
 In dynamic polymorphism, the specific implementation of a method to be called is determined at runtime based on the actual type of the object, rather than its declared type. This means that a method call on an object of a derived class can result in different behavior than the same method call on an object of its base class.
@@ -157,7 +157,7 @@ Dynamic polymorphism is a powerful feature in OOP that allows developers to crea
 In C#, dynamic polymorphism is achieved through the use of the virtual and override keywords. The base class declares a method as virtual, and the derived class overrides the method by providing its own implementation. When a method call is made on an object of the derived class, the overridden method is called instead of the virtual method defined in the base class
 
 -----------------------------------------------------------------------------------
-### Q - Difference between overloading and override?
+### Q - Difference between overloading and override? (With)
 n C#, both method overloading and method overriding are used to achieve polymorphism, but they are different concepts.
 
 Method overloading is a feature that allows you to define multiple methods with the same name but with different parameters. Overloading a method means defining a method with the same name as an existing method but with a different signature. The method signature includes the method name, parameter types, and the number of parameters. Overloading allows you to create methods that perform similar tasks, but with different input parameters. The method that is called at runtime is determined based on the number, types, and order of the arguments passed to the method.
@@ -210,7 +210,7 @@ To avoid errors during compilation, the compiler checks that the method being ov
 In summary, method overloading is used to create multiple methods with the same name but different parameter types, while method overriding is used to provide a new implementation for a method that is already defined in a base class or an interface. Both concepts are used to achieve polymorphism in C#.
 
 -----------------------------------------------------------------------------------
-### Q - What's Access Modifer? 
+### Q - What's Access Modifer?  (With)
 Access modifiers in C# are keywords that determine the visibility and accessibility of classes, properties, methods, and other members in a program. In C#, there are five access modifiers:
 
 public: Public members are accessible from any part of the program. A public member can be accessed from the same assembly or from a different assembly.
@@ -322,7 +322,7 @@ public class Circle : Shape
 In this example, the Shape class has a protected internal area field and a protected internal virtual CalculateArea method. The Circle class inherits from the Shape class and overrides the CalculateArea method to calculate the area of a circle. The area field is accessible from within the Circle class and any other class within the same assembly, but not from outside the assembly.
 
 -----------------------------------------------------------------------------------
-### Q - What is Non-Access Modifer? 
+### Q - What is Non-Access Modifer?  (With)
 Non-access modifiers are keywords in C# that modify the behavior of classes, methods, and other members in a program, but do not affect their accessibility or visibility. In C#, there are four non-access modifiers:
 
 static: The static modifier is used to create a single instance of a member that can be accessed without creating an instance of the class. Static members belong to the class itself, not to any particular instance of the class.
@@ -397,7 +397,7 @@ public class Rectangle : Shape
 In this example, the Shape class has a virtual Draw method, which has an implementation in the base class. The Circle and Rectangle classes override the Draw method to provide their own implementations.
 
 -----------------------------------------------------------------------------------
-### Q -  new key with method in class ?
+### Q -  new key with method in class ? (With)
 In C#, the new keyword is used to declare a member in a derived class that has the same name as a member in the base class. This is called "hiding" the base class member, and it allows the derived class to have its own implementation of the member that is independent of the base class.
 
 Here's an example:
@@ -432,7 +432,7 @@ myAnimal.Eat(); // Output: The animal is eating.
 </pre>
 
 -----------------------------------------------------------------------------------
-### Q -  Different between access and non-access modifier ?
+### Q -  Different between access and non-access modifier ? (With)
 In C#, access modifiers are used to control the accessibility or visibility of classes, methods, fields, properties, and other members in a program, while non-access modifiers modify the behavior of these members without affecting their accessibility.
 
 Access modifiers determine who can access a member and from where, while non-access modifiers determine how a member behaves and what it can do.
@@ -452,7 +452,7 @@ Examples of access modifiers include public, private, protected, and internal. E
 In general, access modifiers are used to control who can access a member, while non-access modifiers are used to modify the behavior of a member. Together, access and non-access modifiers allow developers to control the accessibility and behavior of members in a program, making it easier to create robust and maintainable software.
 
 -----------------------------------------------------------------------------------
-### Q -  When inhertance child class from paret class and override mehthod any method call at first when call parent class or when class child class ?
+### Q -  When inhertance child class from paret class and override mehthod any method call at first when call parent class or when class child class ? (With)
 When a child class inherits from a parent class and overrides a method, the method that is called depends on the type of the object that the method is called on. If the object is an instance of the child class, the overridden method in the child class is called. If the object is an instance of the parent class, the method in the parent class is called.
 
 Here's an example:
@@ -542,7 +542,7 @@ A singleton class is used to control the creation and access to a single instanc
 It's important to choose the right design pattern based on the needs of your application, as both singleton and static classes have their own benefits and drawbacks.
 
 -----------------------------------------------------------------------------------
-### Q -  Different between interface and abstract? and what's new in C# about it ?
+### Q -  Different between interface and abstract? and what's new in C# about it ? (With)
 In C#, interfaces and abstract classes are two different ways to define a contract for derived classes to implement. They have some similarities, but also some important differences.
 
 An interface is a type that defines a set of public methods, properties, events, and indexers that a class must implement. An interface does not provide any implementation details, only the definition of the members that a class must implement. An interface can be used to define a common contract for multiple classes, even if those classes have different base classes.
@@ -597,7 +597,7 @@ It's also worth noting that in some programming languages, such as C#, interface
 **Note** : In last version in C# Interface can contain some implementation.
 
 -----------------------------------------------------------------------------------
-### Q - Abstract method and when can I don't implement abstract method until if inherit abstract class ? with c# example?
+### Q - Abstract method and when can I don't implement abstract method until if inherit abstract class ? with c# example?(With)
 An abstract method is a method that does not have an implementation in the base class, and must be implemented in a derived class. To declare an abstract method in C#, you use the abstract keyword before the method signature, like this:
 
 <pre>
@@ -731,7 +731,7 @@ In this example, we use the typeof operator to get the Type object that represen
 This is just a simple example, but Reflection can be used for many other purposes, such as creating objects dynamically, invoking methods dynamically, and more. However, it should be used with caution, as it can have a negative impact on performance and can make code harder to maintain.
 
 -----------------------------------------------------------------------------------
-### Q - What's Constructor? And What's type of Constructor? 
+### Q - What's Constructor? And What's type of Constructor?  (With)
 In C#, a constructor is a special method that is called when an object of a class is created. It is used to initialize the object's state by assigning values to its properties and performing any other required setup. The constructor has the same name as the class and does not have a return type.
 
 There are several types of constructors in C#, including:
@@ -876,7 +876,7 @@ finally
 In summary, while all three constructs deal with releasing resources, a destructor is used for objects and is called automatically by the GC, a finalize method is also used for objects, but is not guaranteed to be called, and a finally block is used for exception handling and is guaranteed to be executed.
 
 -----------------------------------------------------------------------------------
-### Q - What'S Garbge collector?
+### Q - What'S Garbge collector? (With)
 Garbage Collector (GC) is a feature in many modern programming languages, including C#, Java, and Python, which automatically manages memory allocation and deallocation for an application. The purpose of the GC is to free the developer from the burden of manually managing memory, which can be error-prone and time-consuming.
 
 The GC works by periodically scanning the heap (the memory space where objects are stored) to identify objects that are no longer being used by the application. These objects are marked as garbage and are eligible for collection. When the GC runs, it frees the memory occupied by the garbage objects and returns it to the system.
@@ -888,7 +888,7 @@ Although the GC is generally reliable, it's important to note that it's not perf
 Overall, the GC is a powerful tool that simplifies memory management for developers and reduces the risk of memory leaks and other memory-related issues
 
 -----------------------------------------------------------------------------------
-### Q - What'S seald class?
+### Q - What'S seald class? (With)
 In C#, a sealed class is a class that cannot be inherited by other classes. Once a class is marked as sealed, it can no longer serve as a base class for any other class.
 
 Here's an example of a sealed class in C#:
@@ -910,7 +910,7 @@ Sealing a class is often done for performance reasons, as it allows the compiler
 It's worth noting that although a sealed class cannot be inherited, it can still implement interfaces, and it can still contain virtual methods that can be overridden by its own members.
 
 -----------------------------------------------------------------------------------
-### Q - What's Virtual Key?
+### Q - What's Virtual Key? (With)
 In C#, a virtual key is a code that represents a physical key on a keyboard. Virtual keys are used to enable the processing of user input, such as keystrokes, mouse clicks, and touch events.
 
 <pre>
@@ -959,7 +959,7 @@ In this example, we use the Keys enumeration to compare the KeyPressEventArgs.Ke
 
 
 -----------------------------------------------------------------------------------
-### Q - Different between ienumerable and iqueryable ?  
+### Q - Different between ienumerable and iqueryable ?   (With)(With)(With)(With)(With)(With)(With)(With)(With)(With)
 In C#, IEnumerable and IQueryable are two interfaces that are commonly used with LINQ (Language-Integrated Query) to query and manipulate data. While both interfaces are used to represent a collection of data, they have some key differences in terms of their behavior and performance characteristics.
 
 IEnumerable is the simpler of the two interfaces, and it is used to represent a sequence of data that can be enumerated. It defines a single method, GetEnumerator(), which returns an enumerator that can be used to iterate over the sequence.
@@ -1095,7 +1095,7 @@ This example demonstrates how delegates and expressions can be used to encapsula
 value.
 
 ---------------------------------------------------------------------------------------
-### Q- Different between Pass by refrence and pass by value?
+### Q- Different between Pass by refrence and pass by value? (With)
 In C#, when passing an argument to a method, it can be done in two ways: "pass by reference" and "pass by value".
 
 When an argument is passed by value, a copy of the argument is created and passed to the method, leaving the original argument unchanged. When an argument is passed by reference, a reference to the original argument is passed to the method, allowing the method to modify the original argument.
@@ -1173,7 +1173,7 @@ For the value type int, when we change the value of x, it does not affect the va
 </br>
 
 ## **Database**
-### Q- Lazy loading vs Eager Loading
+### Q- Lazy loading vs Eager Loading (With)
 Lazy loading and eager loading are two approaches to loading data in a software system.
 
 Lazy loading: Lazy loading is a technique in which data is loaded only when it is needed. In other words, data is loaded on demand, rather than being loaded all at once. This approach can improve performance and reduce memory usage, as only the necessary data is loaded into memory. However, lazy loading can also cause delays when the data is first accessed, as the system must retrieve the data from the database or other storage location.
@@ -1185,7 +1185,7 @@ In general, the choice between lazy loading and eager loading depends on the spe
 -----------------------------------------------------------------------------------
 </br>
 
-### Q- Different between this Quires:
+### Q- Different between this Quires: (With)
 #### - Delete and drop 
 #### - Drop and trunke  
 #### - Where and having  
@@ -1235,7 +1235,7 @@ In general, it is recommended to create indexes on columns that are frequently u
 -----------------------------------------------------------------------------------
 </br>
 
-### Index Advanced?
+### Index Advanced? (With)
 Advanced indexing is a technique used in databases to optimize queries that involve multiple conditions or complex expressions. Advanced indexing typically involves creating composite indexes, which are indexes that are created on multiple columns instead of just one.
 
 Composite indexes are useful in situations where queries involve multiple conditions or expressions that reference different columns in a table. By creating an index that includes all of the relevant columns, the database can quickly locate the rows that match the query criteria, without having to scan the entire table.
@@ -1253,7 +1253,7 @@ Overall, advanced indexing techniques are an important tool for optimizing datab
 -----------------------------------------------------------------------------------
 </br>
 
-### Index disadvanced?
+### Index disadvanced? (With)
 While indexes can provide significant performance benefits for queries, they can also have some disadvantages, including:
 
 Increased storage requirements: Indexes require additional storage space to store the index data structures, which can be a significant consideration for large tables.
@@ -1271,7 +1271,7 @@ Overall, indexes are a valuable tool for optimizing query performance in databas
 -----------------------------------------------------------------------------------
 </br>
 
-### What is Clusterd and non Clusterd Index? 
+### What is Clusterd and non Clusterd Index?  (With)
 In a database, a clustered index and a non-clustered index are two types of indexes that can be created on a table to improve the performance of queries.
 
 A clustered index determines the physical order of data in a table. When a clustered index is created on a table, the data in the table is physically reordered based on the values in the indexed column(s). This means that the data is stored in the order of the index, which allows for fast retrieval of data based on the index. A table can have only one clustered index, and it is usually created on the primary key column(s) of the table.
@@ -1283,7 +1283,7 @@ When a query is executed that involves the indexed column(s), the database can u
 -----------------------------------------------------------------------------------
 </br>
 
-### Clusterd Index advanced and disadvanced ?
+### Clusterd Index advanced and disadvanced ? (With)
 Clustered indexes have some advantages and disadvantages compared to non-clustered indexes. Here are some of the advanced and disadvantaged of clustered indexes:
 
 #### Advantages:
@@ -1308,8 +1308,8 @@ Overall, clustered indexes can provide significant performance benefits for cert
 
 -----------------------------------------------------------------------------------
 </br>
-
-### Non-Clusterd Index advanced and disadvanced ?
+ 
+### Non-Clusterd Index advanced and disadvanced ? (With)
 Non-clustered indexes also have some advantages and disadvantages compared to clustered indexes. Here are some of the advanced and disadvantaged of non-clustered indexes:
 
 #### Advantages:
@@ -1565,7 +1565,7 @@ It is important for developers and database administrators to understand the var
 </br>
 
 ## **Solid Principle:**
-### What's SOLID principle?
+### What's SOLID principle? (With)
 SOLID is a set of principles for object-oriented programming that aim to make software systems more maintainable, scalable, and easy to extend. The five SOLID principles are:
 
 Single Responsibility Principle (SRP): This principle states that a class should have only one reason to change. In other words, a class should have only one responsibility, and any change to that responsibility should require only one change to the class.
@@ -1586,7 +1586,7 @@ https://www.youtube.com/watch?v=-hbWDYRSjqk&list=PLnqAlQ9hFYdflFSS4NigVB7aSoYPNw
 </br>
 
 ## **Design patterns:**
-### Q- What's Design Pattern?
+### Q- What's Design Pattern? (With)
 A design pattern is a general reusable solution to a commonly occurring problem within a particular context in software design. It is a description or template for how to solve a particular problem that can be adapted and reused in different situations. Design patterns are like templates or blueprints for building software that help developers solve common problems in an efficient and effective way.
 
 Design patterns can be categorized into three main groups: creational, structural, and behavioral. Creational patterns are concerned with object creation mechanisms, trying to create objects in a manner suitable to the situation. Structural patterns deal with object composition, forming class hierarchies, and defining how objects are composed to form larger structures. Behavioral patterns are concerned with communication between objects, encapsulating behaviors and interactions between objects.
@@ -2017,7 +2017,7 @@ In summary, the microservices architecture provides many benefits in terms of sc
 </br>
 
 ## **Software Engineer**
-Q- Principles ? 
+### Q- Principles ? 
 DRY, KISS, and YAGNI are additional principles that are often used in software development to promote simplicity, maintainability, and productivity.
 
 DRY: Don't Repeat Yourself. This principle states that every piece of knowledge or logic in a system should have a single, authoritative representation. In other words, if there are two or more pieces of code that do the same thing, then they should be refactored into a single reusable component.
@@ -2027,6 +2027,22 @@ KISS: Keep It Simple, Stupid. This principle states that the simplest solution i
 YAGNI: You Ain't Gonna Need It. This principle states that developers should not add functionality until it is needed. In other words, developers should avoid premature optimization or adding features that are not currently needed in the system.
 
 Overall, these principles can help developers create more maintainable, efficient, and effective software systems. By following DRY, KISS, and YAGNI, developers can reduce code complexity, avoid unnecessary work, and focus on delivering the most valuable features to the end-users.
+
+--------------------------------------------------------------------------------------------------------------------------
+</br>
+
+### Q-Memory managment heap and stack in c#
+In C#, memory is managed by the .NET Framework through a garbage collector. The garbage collector automatically frees memory that is no longer being used by an application.
+
+In C#, there are two main types of memory allocation: stack and heap.
+
+The stack is used for storing value types, such as integers, booleans, and enums. The stack is a LIFO (last-in, first-out) data structure that is automatically managed by the runtime. When a value type is created, it is pushed onto the stack. When the method that created the value type exits, the value type is automatically removed from the stack.
+
+The heap is used for storing reference types, such as objects, strings, and arrays. Reference types are created on the heap, and a reference (i.e., a pointer) to the location of the object on the heap is stored on the stack. When an object is no longer being used by an application, the garbage collector will automatically free the memory used by the object.
+
+It's important to note that the heap is much larger than the stack, and is not automatically managed by the runtime. Instead, the garbage collector periodically scans the heap to identify objects that are no longer being used, and frees the memory used by those objects.
+
+In summary, C# uses a garbage collector to automatically manage memory, and allocates value types on the stack and reference types on the heap.
 
 --------------------------------------------------------------------------------------------------------------------------
 </br>
