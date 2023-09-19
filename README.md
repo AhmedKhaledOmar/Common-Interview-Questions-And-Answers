@@ -577,7 +577,7 @@ In this example, the Shape class is marked as abstract, which means it cannot be
 
 As for what's new in C# about interfaces and abstract classes, in C# 8.0 and later, interfaces can now contain default implementations for methods, which means that you can provide a default implementation for an interface method without forcing all implementing classes to provide their own implementation. Additionally, in C# 9.0 and later, abstract classes can now have implementation for interface members, which means that an abstract class can provide a default implementation for an interface method that derived classes can choose to override or not.
 
-### More About this comparison :  
+### More on this comparison :  
 
 Both abstract classes and interfaces are used to define abstract types in object-oriented programming. Here are some of the main differences between them:
 
@@ -732,7 +732,7 @@ In this example, we use the typeof operator to get the Type object that represen
 This is just a simple example, but Reflection can be used for many other purposes, such as creating objects dynamically, invoking methods dynamically, and more. However, it should be used with caution, as it can have a negative impact on performance and can make code harder to maintain.
 
 -----------------------------------------------------------------------------------
-### Q - What's Constructor? And What's type of Constructor?  (With)
+### Q - What's a Constructor? And What are the types of Constructor?  (With)
 In C#, a constructor is a special method that is called when an object of a class is created. It is used to initialize the object's state by assigning values to its properties and performing any other required setup. The constructor has the same name as the class and does not have a return type.
 
 There are several types of constructors in C#, including:
@@ -802,7 +802,7 @@ public class Singleton
 These are just a few examples of the types of constructors that are available in C#. Constructors are a fundamental part of object-oriented programming, and they are used extensively in building classes and objects.
 
 -----------------------------------------------------------------------------------
-### Q - What's Destructor? 
+### Q - What's a Destructor? 
 In C#, a destructor is a special method that is called automatically when an object is about to be destroyed. It is used to perform any cleanup or finalization that is required before the object is removed from memory.
 
 A destructor is declared in a class using the tilde (~) symbol followed by the class name. It is called automatically by the garbage collector when the object is no longer referenced by any other part of the program. Unlike a constructor, a destructor cannot be called directly.
@@ -827,7 +827,7 @@ In this example, the constructor is called when an object of the class is create
 It's important to note that the use of destructors in C# is generally discouraged, as they can introduce unnecessary complexity and make it harder to manage memory and resources. Instead, it is generally recommended to use the IDisposable interface and the Dispose() method to perform cleanup and finalization.
 
 -----------------------------------------------------------------------------------
-### Q -What's the difference between destructor and Finilize and Finally?
+### Q -What's the difference between destructor and finalize method and finally block?
 In C#, a destructor, finalize method, and finally block are three different constructs that serve different purposes. Here is a brief explanation of each of them:
 
 Destructor:
@@ -846,17 +846,8 @@ public class MyClass
 Finalize method:
 The finalize method is a method that is called by the GC before an object is garbage collected. Like a destructor, the purpose of the finalize method is to release any unmanaged resources that the object may be holding. However, the finalize method is not guaranteed to be called, and its timing is non-deterministic.
 
-Here's an example of a finalize method in C#:
-<pre>
-public class MyClass
-{
-    ~MyClass()
-    {
-        // Release unmanaged resources
-    }
-}
-</pre>
-Finally block:
+Note: The C# compiler does not allow you to override the Finalize method. Instead, you provide a finalizer by implementing a destructor for your class.
+Finally Block:
 The finally block is a block of code that is guaranteed to be executed, regardless of whether an exception is thrown or not. The purpose of the finally block is to release any resources that may have been acquired in a try block.
 
 Here's an example of a finally block in C#:
@@ -889,7 +880,7 @@ Although the GC is generally reliable, it's important to note that it's not perf
 Overall, the GC is a powerful tool that simplifies memory management for developers and reduces the risk of memory leaks and other memory-related issues
 
 -----------------------------------------------------------------------------------
-### Q - What'S seald class? (With)
+### Q - What's a seald class? (With)
 In C#, a sealed class is a class that cannot be inherited by other classes. Once a class is marked as sealed, it can no longer serve as a base class for any other class.
 
 Here's an example of a sealed class in C#:
@@ -911,7 +902,7 @@ Sealing a class is often done for performance reasons, as it allows the compiler
 It's worth noting that although a sealed class cannot be inherited, it can still implement interfaces, and it can still contain virtual methods that can be overridden by its own members.
 
 -----------------------------------------------------------------------------------
-### Q - What's Virtual Key? (With)
+### Q - What's a virtual key? (With)
 In C#, a virtual key is a code that represents a physical key on a keyboard. Virtual keys are used to enable the processing of user input, such as keystrokes, mouse clicks, and touch events.
 
 <pre>
@@ -960,7 +951,7 @@ In this example, we use the Keys enumeration to compare the KeyPressEventArgs.Ke
 
 
 -----------------------------------------------------------------------------------
-### Q - Difference between ienumerable and iqueryable ?   (With)(With)(With)(With)(With)(With)(With)(With)(With)(With)
+### Q - Difference between IEnumerable and IQueryable ?   (With)
 In C#, IEnumerable and IQueryable are two interfaces that are commonly used with LINQ (Language-Integrated Query) to query and manipulate data. While both interfaces are used to represent a collection of data, they have some key differences in terms of their behavior and performance characteristics.
 
 IEnumerable is the simpler of the two interfaces, and it is used to represent a sequence of data that can be enumerated. It defines a single method, GetEnumerator(), which returns an enumerator that can be used to iterate over the sequence.
@@ -994,7 +985,7 @@ In this example, we use an IQueryable<Product> collection to query a database of
 The main advantage of using IQueryable over IEnumerable is that it allows queries to be executed on the server side, rather than fetching all the data and filtering it on the client side. This can result in significant performance gains for large datasets. However, it's important to note that not all LINQ providers support IQueryable, so it may not be available in all scenarios.
 
 -----------------------------------------------------------------------------------
-### Q - What's record in C# 9?
+### Q - What's a record in C# 9?
 C# 9 introduces a new feature called records, which are a simplified way to define classes that are primarily used to store data. Records provide a concise syntax for defining immutable objects with value semantics, and they can be used to reduce boilerplate code and improve the readability of your code.
 
 Here's an example of how to define a record in C# 9:
@@ -1039,7 +1030,7 @@ Reference types: Classes are reference types, which means that their instances a
 Overall, while records share many similarities with classes, they are primarily designed for modeling data that is not meant to be modified and can provide a more concise and readable way to define simple data structures. However, classes still have many advantages and may be more appropriate for more complex scenarios.
 
 -----------------------------------------------------------------------------------
-### Q - What is delegate and experssion in C# and how to use it?
+### Q - What is a delegate and an experssion in C# and how to use it?
 In C#, a delegate is a type that represents a method signature. It can be used to reference methods as objects and pass them as parameters to other methods. An expression is a way of writing code that evaluates to a value. In C#, expressions can be used in a variety of contexts, such as assignment statements, method calls, and conditional statements.
 
 Here's an example of using a delegate and expression in C#:
@@ -1092,8 +1083,7 @@ We then print the value of result to the console again. The output should be the
 <pre>
 Result = 15
 </pre>
-This example demonstrates how delegates and expressions can be used to encapsulate method calls and evaluate code at runtime. Delegates can be used to pass methods as parameters to other methods, while expressions can be used to define code that evaluates to a 
-value.
+This example demonstrates how delegates and expressions can be used to encapsulate method calls and evaluate code at runtime. Delegates can be used to pass methods as parameters to other methods, while expressions can be used to define code that evaluates to a value.
 
 ---------------------------------------------------------------------------------------
 ### Q- Difference between Pass by refrence and pass by value? (With)
@@ -1132,7 +1122,7 @@ static void IncrementByRef(ref int b) {
 In this example, the method IncrementByRef takes an integer argument b by reference, indicated by the ref keyword. The Main method initializes an integer a to 5 and calls the IncrementByRef method, passing in a with the ref keyword. When IncrementByRef is called, a reference to the original value of a is passed to the method. b is then incremented by 1, modifying the original value of a. When the program prints a to the console, it now outputs 6.
 
 -----------------------------------------------------------------------------------
-### Q- When equal refrence object to refrence object and same in case value?
+### Q- What is the difference between assigning a reference type to another reference type and assigning a value type to another value type?
 When working with objects in C#, it is important to understand the difference between reference types and value types.
 
 Reference types are types that are stored in memory as a reference to an object, rather than as the actual value of the object. When you create a new instance of a reference type, a new object is created in memory, and a reference to that object is returned. Any variables that reference the same object will have the same value.
