@@ -1,7 +1,7 @@
 # Common-Interview-Questions-And-Answers (All Examples using C# language)
 ## **General Topics:**
 -----------------------------------------------------------------------------------
-### Q- What is Casting and type of casting in C#? (With)
+### Q- What is Casting and what are the types of casting in C#? (With)
 Casting is the process of converting a value from one data type to another in C#. There are several types of casting that you can use to convert values:
 
 Implicit Casting: This is when the compiler automatically converts a value from one type to another, if it can be done safely. For example, you can implicitly cast an int to a double, because there is no loss of precision.
@@ -35,13 +35,14 @@ In the above example, we use implicit casting to convert an int to a double, and
 Casting is a powerful tool in C#, but it should be used with care, as it can lead to unexpected results if not used properly. It is important to understand the limitations of each type of casting, and to be mindful of potential data loss or type mismatches when converting values.
 
 -----------------------------------------------------------------------------------
-### Q- object obj = null; (C#) (With)
+### Q- What will happen in each case? (C#) (With)
+### object obj = null;
 ### - int d = (int)obj;
 ### - int d = obj as int ;
 ### - int d = Int64.Parse(obj);
 ### - int d = Int64.TryParse(obj)
 ### - int d = obj is int ;
-### What happend in all this cases ?
+
 In the following code, obj is declared as a null object reference of type object:
 
 <pre>
@@ -61,7 +62,7 @@ int d = obj is int;: This is a type check that returns false, because obj is not
 In general, it's important to be careful when casting, parsing or checking the type of null references, because these operations can throw exceptions or return unexpected results. It's a good practice to check if an object is null before attempting to cast, parse or use it, to avoid null reference exceptions.
 
 -----------------------------------------------------------------------------------
-### Q - What's Ref key and out Key in C# ? (With)
+### Q - What are Ref and out Keywords in C# ? (With)
 In C#, ref and out are keywords that are used to pass arguments by reference in a method call. Here's what each of them does:
 
 ref keyword: The ref keyword is used to pass a parameter by reference to a method. This means that any changes made to the parameter inside the method will be reflected outside the method as well. The variable passed with ref must be initialized before it is passed.
@@ -115,7 +116,7 @@ OOP provides several benefits, including code reusability, encapsulation, and th
 **ْNote** : In short anything in my project I treat it as an object
 
 -----------------------------------------------------------------------------------
-###  Q- What is OOP Types ? (With)
+###  Q- What are OOP Types ? (With)
 In C#, there are four main types of OOP. These are:
 
 1-Abstraction
@@ -157,7 +158,7 @@ Dynamic polymorphism is a powerful feature in OOP that allows developers to crea
 In C#, dynamic polymorphism is achieved through the use of the virtual and override keywords. The base class declares a method as virtual, and the derived class overrides the method by providing its own implementation. When a method call is made on an object of the derived class, the overridden method is called instead of the virtual method defined in the base class
 
 -----------------------------------------------------------------------------------
-### Q - Difference between overloading and override? (With)
+### Q - Difference between method overloading and overriding? (With)
 n C#, both method overloading and method overriding are used to achieve polymorphism, but they are different concepts.
 
 Method overloading is a feature that allows you to define multiple methods with the same name but with different parameters. Overloading a method means defining a method with the same name as an existing method but with a different signature. The method signature includes the method name, parameter types, and the number of parameters. Overloading allows you to create methods that perform similar tasks, but with different input parameters. The method that is called at runtime is determined based on the number, types, and order of the arguments passed to the method.
@@ -210,7 +211,7 @@ To avoid errors during compilation, the compiler checks that the method being ov
 In summary, method overloading is used to create multiple methods with the same name but different parameter types, while method overriding is used to provide a new implementation for a method that is already defined in a base class or an interface. Both concepts are used to achieve polymorphism in C#.
 
 -----------------------------------------------------------------------------------
-### Q - What's Access Modifer?  (With)
+### Q - What are Access Modifers?  (With)
 Access modifiers in C# are keywords that determine the visibility and accessibility of classes, properties, methods, and other members in a program. In C#, there are five access modifiers:
 
 public: Public members are accessible from any part of the program. A public member can be accessed from the same assembly or from a different assembly.
@@ -322,7 +323,7 @@ public class Circle : Shape
 In this example, the Shape class has a protected internal area field and a protected internal virtual CalculateArea method. The Circle class inherits from the Shape class and overrides the CalculateArea method to calculate the area of a circle. The area field is accessible from within the Circle class and any other class within the same assembly, but not from outside the assembly.
 
 -----------------------------------------------------------------------------------
-### Q - What is Non-Access Modifer?  (With)
+### Q - What are Non-Access Modifers?  (With)
 Non-access modifiers are keywords in C# that modify the behavior of classes, methods, and other members in a program, but do not affect their accessibility or visibility. In C#, there are four non-access modifiers:
 
 static: The static modifier is used to create a single instance of a member that can be accessed without creating an instance of the class. Static members belong to the class itself, not to any particular instance of the class.
@@ -397,7 +398,7 @@ public class Rectangle : Shape
 In this example, the Shape class has a virtual Draw method, which has an implementation in the base class. The Circle and Rectangle classes override the Draw method to provide their own implementations.
 
 -----------------------------------------------------------------------------------
-### Q -  new key with method in class ? (With)
+### Q - What is the usage of new keyword with a method in a class ? (With)
 In C#, the new keyword is used to declare a member in a derived class that has the same name as a member in the base class. This is called "hiding" the base class member, and it allows the derived class to have its own implementation of the member that is independent of the base class.
 
 Here's an example:
@@ -432,7 +433,7 @@ myAnimal.Eat(); // Output: The animal is eating.
 </pre>
 
 -----------------------------------------------------------------------------------
-### Q -  Different between access and non-access modifier ? (With)
+### Q -  Difference between access and non-access modifiers ? (With)
 In C#, access modifiers are used to control the accessibility or visibility of classes, methods, fields, properties, and other members in a program, while non-access modifiers modify the behavior of these members without affecting their accessibility.
 
 Access modifiers determine who can access a member and from where, while non-access modifiers determine how a member behaves and what it can do.
@@ -452,7 +453,7 @@ Examples of access modifiers include public, private, protected, and internal. E
 In general, access modifiers are used to control who can access a member, while non-access modifiers are used to modify the behavior of a member. Together, access and non-access modifiers allow developers to control the accessibility and behavior of members in a program, making it easier to create robust and maintainable software.
 
 -----------------------------------------------------------------------------------
-### Q -  When inhertance child class from paret class and override mehthod any method call at first when call parent class or when class child class ? (With)
+### Q -  When a child class inherits from a parent class and overrides a method, Which method will be invoked if we call the overridden method from child class? (With)
 When a child class inherits from a parent class and overrides a method, the method that is called depends on the type of the object that the method is called on. If the object is an instance of the child class, the overridden method in the child class is called. If the object is an instance of the parent class, the method in the parent class is called.
 
 Here's an example:
@@ -493,7 +494,7 @@ myAnimal.Speak(); // Output: The animal makes a sound.
 </pre>
 
 -----------------------------------------------------------------------------------
-### Q -  Different between singelton and static class?
+### Q -  Difference between singelton and static class?
 Singleton and static classes are two different design patterns in C# that are used to create classes that have only one instance in memory. However, they have some differences in implementation and behavior.
 
 A singleton class is a class that can only have one instance in memory at any given time. It is created using a private constructor and a static method to retrieve the single instance. Singleton classes are often used for classes that manage system resources or have global state.
@@ -542,7 +543,7 @@ A singleton class is used to control the creation and access to a single instanc
 It's important to choose the right design pattern based on the needs of your application, as both singleton and static classes have their own benefits and drawbacks.
 
 -----------------------------------------------------------------------------------
-### Q -  Different between interface and abstract? and what's new in C# about it ? (With)
+### Q -  Difference between interface and abstract class? and what's new in C# about interfaces ? (With)
 In C#, interfaces and abstract classes are two different ways to define a contract for derived classes to implement. They have some similarities, but also some important differences.
 
 An interface is a type that defines a set of public methods, properties, events, and indexers that a class must implement. An interface does not provide any implementation details, only the definition of the members that a class must implement. An interface can be used to define a common contract for multiple classes, even if those classes have different base classes.
@@ -576,7 +577,7 @@ In this example, the Shape class is marked as abstract, which means it cannot be
 
 As for what's new in C# about interfaces and abstract classes, in C# 8.0 and later, interfaces can now contain default implementations for methods, which means that you can provide a default implementation for an interface method without forcing all implementing classes to provide their own implementation. Additionally, in C# 9.0 and later, abstract classes can now have implementation for interface members, which means that an abstract class can provide a default implementation for an interface method that derived classes can choose to override or not.
 
-### More About this compare :  
+### More About this comparison :  
 
 Both abstract classes and interfaces are used to define abstract types in object-oriented programming. Here are some of the main differences between them:
 
@@ -594,10 +595,10 @@ In general, abstract classes are used when you want to create a common base clas
 
 It's also worth noting that in some programming languages, such as C#, interfaces can contain default implementations for their methods using default interface methods. This blurs the distinction between interfaces and abstract classes somewhat, but the basic differences outlined above still hold.
 
-**Note** : In last version in C# Interface can contain some implementation.
+**Note** : In last version in C# Interfaces can contain some implementation.
 
 -----------------------------------------------------------------------------------
-### Q - Abstract method and when can I don't implement abstract method until if inherit abstract class ? with c# example?(With)
+### Q - Abstract method and when can I not implement an abstract method in a child class ? with c# example?(With)
 An abstract method is a method that does not have an implementation in the base class, and must be implemented in a derived class. To declare an abstract method in C#, you use the abstract keyword before the method signature, like this:
 
 <pre>
@@ -636,7 +637,7 @@ In this example, MyBaseClass is an abstract class with a non-abstract method DoS
 Note that if you have an abstract method that is not implemented in a derived class, then the derived class must also be declared as an abstract class. If you try to create an instance of a derived class that does not implement all the abstract methods of its base class, you will get a compilation error.
 
 -----------------------------------------------------------------------------------
-### Q - Different between class and struct ? 
+### Q - Difference between class and struct ? 
 In C#, a class and a struct are two different types of user-defined data structures, each with its own characteristics and uses.
 
 Here are some of the main differences between a class and a struct in C#:
@@ -826,7 +827,7 @@ In this example, the constructor is called when an object of the class is create
 It's important to note that the use of destructors in C# is generally discouraged, as they can introduce unnecessary complexity and make it harder to manage memory and resources. Instead, it is generally recommended to use the IDisposable interface and the Dispose() method to perform cleanup and finalization.
 
 -----------------------------------------------------------------------------------
-### Q -What's Different between destructor and Finilize and Finally?
+### Q -What's the difference between destructor and Finilize and Finally?
 In C#, a destructor, finalize method, and finally block are three different constructs that serve different purposes. Here is a brief explanation of each of them:
 
 Destructor:
@@ -876,7 +877,7 @@ finally
 In summary, while all three constructs deal with releasing resources, a destructor is used for objects and is called automatically by the GC, a finalize method is also used for objects, but is not guaranteed to be called, and a finally block is used for exception handling and is guaranteed to be executed.
 
 -----------------------------------------------------------------------------------
-### Q - What'S Garbge collector? (With)
+### Q - What is the Garbge collector? (With)
 Garbage Collector (GC) is a feature in many modern programming languages, including C#, Java, and Python, which automatically manages memory allocation and deallocation for an application. The purpose of the GC is to free the developer from the burden of manually managing memory, which can be error-prone and time-consuming.
 
 The GC works by periodically scanning the heap (the memory space where objects are stored) to identify objects that are no longer being used by the application. These objects are marked as garbage and are eligible for collection. When the GC runs, it frees the memory occupied by the garbage objects and returns it to the system.
@@ -959,7 +960,7 @@ In this example, we use the Keys enumeration to compare the KeyPressEventArgs.Ke
 
 
 -----------------------------------------------------------------------------------
-### Q - Different between ienumerable and iqueryable ?   (With)(With)(With)(With)(With)(With)(With)(With)(With)(With)
+### Q - Difference between ienumerable and iqueryable ?   (With)(With)(With)(With)(With)(With)(With)(With)(With)(With)
 In C#, IEnumerable and IQueryable are two interfaces that are commonly used with LINQ (Language-Integrated Query) to query and manipulate data. While both interfaces are used to represent a collection of data, they have some key differences in terms of their behavior and performance characteristics.
 
 IEnumerable is the simpler of the two interfaces, and it is used to represent a sequence of data that can be enumerated. It defines a single method, GetEnumerator(), which returns an enumerator that can be used to iterate over the sequence.
@@ -1020,7 +1021,7 @@ Console.WriteLine(person2); // Person { FirstName = John, LastName = Doe, Age = 
 Overall, records are a powerful and convenient way to define simple classes that are primarily used to store data. They provide many features and benefits out-of-the-box, which can reduce the amount of boilerplate code you need to write and make your code more concise and readable.
 
 -----------------------------------------------------------------------------------
-### Q - What's different between class and record in C# 9 ?
+### Q - What's the Difference between class and record in C# 9 ?
 In C# 9, records are a new feature that provides a simplified syntax for defining classes that are primarily used to store data. While records share many similarities with classes, there are some key differences between the two.
 
 Here are some of the main differences between classes and records in C# 9:
@@ -1095,7 +1096,7 @@ This example demonstrates how delegates and expressions can be used to encapsula
 value.
 
 ---------------------------------------------------------------------------------------
-### Q- Different between Pass by refrence and pass by value? (With)
+### Q- Difference between Pass by refrence and pass by value? (With)
 In C#, when passing an argument to a method, it can be done in two ways: "pass by reference" and "pass by value".
 
 When an argument is passed by value, a copy of the argument is created and passed to the method, leaving the original argument unchanged. When an argument is passed by reference, a reference to the original argument is passed to the method, allowing the method to modify the original argument.
@@ -1185,7 +1186,7 @@ In general, the choice between lazy loading and eager loading depends on the spe
 -----------------------------------------------------------------------------------
 </br>
 
-### Q- Different between this Quires: (With)
+### Q- Difference between these Queries: (With)
 #### - Delete and drop 
 #### - Drop and trunke  
 #### - Where and having  
@@ -1758,7 +1759,7 @@ In summary, the Proxy pattern is a useful design pattern in software engineering
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-Different between Proxy Pattern and Facade Pattern?
+### Q-Difference between Proxy Pattern and Facade Pattern?
 Although both the Proxy pattern and the Facade pattern provide a layer of abstraction between the client and an underlying system, they serve different purposes.
 
 The Facade pattern provides a simplified interface to a complex system, while the Proxy pattern provides a surrogate or placeholder for another object to control access to it.
@@ -1853,7 +1854,7 @@ Overall, the Abstract Factory pattern provides a flexible way to create families
 </br>
 
 ## **Software Architecture**
-### Q-Different between Architecture and design pattern?
+### Q-Difference between Architecture and design pattern?
 Architecture and design patterns are related concepts in software development, but they refer to different things.
 
 Architecture refers to the overall structure of a software system, including its components, their interactions, and how they are organized to achieve specific goals. Architecture defines the high-level decisions that determine how the system will be built and how it will operate. Examples of software architectures include client-server, microservices, and event-driven architectures.
