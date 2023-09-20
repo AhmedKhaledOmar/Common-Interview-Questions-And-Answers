@@ -1176,12 +1176,12 @@ In general, the choice between lazy loading and eager loading depends on the spe
 -----------------------------------------------------------------------------------
 </br>
 
-### Q- Difference between these Queries: (With)
+### Q- Difference between these statements: (With)
 #### - Delete and drop 
-#### - Drop and trunke  
+#### - Drop and truncate 
 #### - Where and having  
-#### - Join and Unoin  
-#### - UnUnion and Unoin  
+#### - Join and Union
+#### - Union and Union All
 #### - Not in and Not exist   
 #### - What is DISTINCT  
 Delete and drop:
@@ -1214,7 +1214,7 @@ DISTINCT is a keyword used to remove duplicates from a result set. It is used in
 -----------------------------------------------------------------------------------
 </br>
 
-### What is Index? 
+### What is an Index? 
 In the context of databases, an index is a data structure that is used to improve the speed of data retrieval operations on a table. An index can be thought of as a pointer to the location of data within a table, similar to the index at the back of a book that allows you to quickly find a specific page.
 
 An index is created on one or more columns of a table and contains a sorted copy of the data in those columns, along with a pointer to the location of each row in the table that contains that data. When a query is executed that involves the indexed columns, the database can use the index to quickly find the rows that match the query criteria, rather than having to scan the entire table.
@@ -1226,7 +1226,7 @@ In general, it is recommended to create indexes on columns that are frequently u
 -----------------------------------------------------------------------------------
 </br>
 
-### Index Advanced? (With)
+### What is advanced indexing? (With)
 Advanced indexing is a technique used in databases to optimize queries that involve multiple conditions or complex expressions. Advanced indexing typically involves creating composite indexes, which are indexes that are created on multiple columns instead of just one.
 
 Composite indexes are useful in situations where queries involve multiple conditions or expressions that reference different columns in a table. By creating an index that includes all of the relevant columns, the database can quickly locate the rows that match the query criteria, without having to scan the entire table.
@@ -1244,7 +1244,7 @@ Overall, advanced indexing techniques are an important tool for optimizing datab
 -----------------------------------------------------------------------------------
 </br>
 
-### Index disadvanced? (With)
+### What are index disadvantages? (With)
 While indexes can provide significant performance benefits for queries, they can also have some disadvantages, including:
 
 Increased storage requirements: Indexes require additional storage space to store the index data structures, which can be a significant consideration for large tables.
@@ -1274,7 +1274,7 @@ When a query is executed that involves the indexed column(s), the database can u
 -----------------------------------------------------------------------------------
 </br>
 
-### Clusterd Index advanced and disadvanced ? (With)
+### What are Clusterd Index advantages and disadvantages ? (With)
 Clustered indexes have some advantages and disadvantages compared to non-clustered indexes. Here are some of the advanced and disadvantaged of clustered indexes:
 
 #### Advantages:
@@ -1300,7 +1300,7 @@ Overall, clustered indexes can provide significant performance benefits for cert
 -----------------------------------------------------------------------------------
 </br>
  
-### Non-Clusterd Index advanced and disadvanced ? (With)
+### What are Non-Clusterd Index advantages and disadvantages ? (With)
 Non-clustered indexes also have some advantages and disadvantages compared to clustered indexes. Here are some of the advanced and disadvantaged of non-clustered indexes:
 
 #### Advantages:
@@ -1345,7 +1345,7 @@ Normalization is important because it helps ensure that data is consistent and a
 -----------------------------------------------------------------------------------
 </br>
 
-### Q- What is stored procuder and when used it ?
+### Q- What is a stored procedure and when to use it ?
 A stored procedure is a precompiled collection of SQL statements that are stored in a database and can be executed as a single unit. Stored procedures are used to encapsulate frequently used database operations, such as inserting, updating, and retrieving data, into reusable code that can be called from multiple applications or client programs.
 
 Stored procedures offer several advantages over ad hoc SQL statements:
@@ -1382,7 +1382,7 @@ This would return a list of all customers with the last name "Smith". You can al
 -----------------------------------------------------------------------------------
 </br>
 
-### Q- What is Function and when used it ?
+### Q- What is a Function and when to use it ?
 In SQL, a function is a prewritten code block that can be called to perform a specific task. Functions are similar to stored procedures, but they return a value or a table rather than executing a series of statements.
 
 Functions are useful in situations where you need to perform a specific calculation or transformation on a set of data, and want to reuse that code across multiple queries or applications.
@@ -1420,7 +1420,7 @@ This would also return the value 5. Functions can be used in a wide variety of s
 -----------------------------------------------------------------------------------
 </br>
 
-### Q- Stored procuder vs Function ?
+### Q- Stored procedures vs Functions ?
 Stored procedures and functions are both prewritten code blocks in SQL, but they differ in their purpose and usage.
 
 Stored procedures are used to encapsulate a series of SQL statements or operations into a reusable code block that can be called from multiple applications or client programs. Stored procedures can have input and output parameters, and can return multiple result sets or update data in the database.
@@ -1442,7 +1442,7 @@ In general, stored procedures are used for more complex database operations, whi
 -----------------------------------------------------------------------------------
 </br>
 
-### Q- What is constraint?
+### Q- What is a constraint?
 In SQL, a constraint is a rule or restriction that is applied to a table column or a group of columns. Constraints help to ensure data integrity and consistency by preventing invalid or inconsistent data from being inserted or updated in the table.
 
 Here are some commonly used constraints in SQL:
@@ -1462,7 +1462,7 @@ Constraints can be defined when a table is created, or they can be added later u
 -----------------------------------------------------------------------------------
 </br>
 
-### Q- What is Trigger?
+### Q- What is a Trigger?
 In SQL, a trigger is a special type of stored procedure that is automatically executed in response to certain database events, such as an insert, update, or delete operation on a table. Triggers can be used to enforce business rules, audit changes to data, or perform complex data transformations.
 
 Triggers are defined on a specific table or view, and are automatically executed before or after the database operation that triggers them. For example, a trigger can be defined to execute before an insert operation, to validate the data being inserted and enforce certain business rules. Similarly, a trigger can be defined to execute after an update operation, to perform some additional data transformation or to update other tables in the database.
@@ -1511,7 +1511,7 @@ In this example, the CTE sales_by_region is defined as the total sales by region
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-What is View?
+### Q-What is a View?
 In SQL, a view is a virtual table that is defined by a SQL query. Unlike physical tables, views do not contain any data themselves, but instead provide a way to query and present data from one or more underlying tables or views.
 
 Views can be used to simplify complex queries by providing a pre-defined subset of data that is tailored to a specific use case or application. For example, a view could be created to show only the most recent orders from a customer, or to summarize sales data by region or product category.
@@ -1532,7 +1532,7 @@ In this example, a view called customer_orders is created that joins the custome
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-What is isolations levels?
+### Q-What are isolation levels?
 
 In database management systems, isolation levels are a set of rules that determine how transactions interact with each other and with the underlying data. Isolation levels define the degree to which one transaction must be isolated from other transactions and how the changes made by one transaction can be seen by other transactions.
 
