@@ -1555,8 +1555,8 @@ It is important for developers and database administrators to understand the var
 -----------------------------------------------------------------------------------
 </br>
 
-## **Solid Principle:**
-### What's SOLID principle? (With)
+## **Solid Principles:**
+### What are SOLID Principles? (With)
 SOLID is a set of principles for object-oriented programming that aim to make software systems more maintainable, scalable, and easy to extend. The five SOLID principles are:
 
 Single Responsibility Principle (SRP): This principle states that a class should have only one reason to change. In other words, a class should have only one responsibility, and any change to that responsibility should require only one change to the class.
@@ -1577,15 +1577,15 @@ https://www.youtube.com/watch?v=-hbWDYRSjqk&list=PLnqAlQ9hFYdflFSS4NigVB7aSoYPNw
 </br>
 
 ## **Design patterns:**
-### Q- What's Design Pattern? (With)
+### Q- What's a Design Pattern? (With)
 A design pattern is a general reusable solution to a commonly occurring problem within a particular context in software design. It is a description or template for how to solve a particular problem that can be adapted and reused in different situations. Design patterns are like templates or blueprints for building software that help developers solve common problems in an efficient and effective way.
 
 Design patterns can be categorized into three main groups: creational, structural, and behavioral. Creational patterns are concerned with object creation mechanisms, trying to create objects in a manner suitable to the situation. Structural patterns deal with object composition, forming class hierarchies, and defining how objects are composed to form larger structures. Behavioral patterns are concerned with communication between objects, encapsulating behaviors and interactions between objects.
 
 The use of design patterns can provide several benefits, such as reducing the time and effort needed to solve common problems, improving code readability and maintainability, facilitating communication between team members, and promoting code reusability. There are many well-known design patterns, such as the Singleton pattern, Factory pattern, Observer pattern, Decorator pattern, and many more.
-<small>
+
 By understanding and applying design patterns, developers can create more robust, maintainable, and extensible software that can better meet the needs of their users. However, it's important to note that design patterns should be used judiciously and only where appropriate. Overuse or misuse of design patterns can lead to unnecessarily complex and difficult-to-maintain code.
-</small>
+
 -----------------------------------------------------------------------------------
 </br>
 
@@ -1602,7 +1602,6 @@ Overall, the repository pattern is a widely used approach that promotes separati
 </br>
 
 ### Q- What's Unit of work Pattern?
--Unit of work Pattern : 
 
 The Unit of Work Pattern is a design pattern used in software engineering to manage database transactions and simplify the interaction between the application's business logic and the data access layer.
 
@@ -1639,7 +1638,7 @@ Overall, Dependency Injection is a powerful tool for creating more modular, test
 [https://www.youtube.com/watch?v=YO4MGNu2xvI](https://www.youtube.com/watch?v=YO4MGNu2xvI)
 
 
-#### Three ways to implement Dependency injection ? 
+#### What are the different scopes and lifetimes of dependencies in Dependency Injection ? 
 To add Dependency Injection (DI) to a program file, you typically need to follow these general steps:
 Identify the dependencies of your class or component. This includes any external objects, libraries, or services that are needed for the class to function.
 Create an interface or abstraction for the dependencies, if needed. This allows for more flexibility in substituting different implementations of the dependencies later on.
@@ -1763,7 +1762,7 @@ In summary, the main difference between the Proxy pattern and the Facade pattern
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-Observal Pattern?
+### Q-Observer Pattern?
 The Observer pattern is a design pattern in software engineering that allows objects to be notified of changes to the state of other objects without being tightly coupled to them. The purpose of the Observer pattern is to define a one-to-many dependency between objects, so that when one object changes its state, all its dependent objects are notified and updated automatically.
 
 The Observer pattern consists of the following components:
@@ -1823,7 +1822,7 @@ Overall, the Factory pattern provides a flexible way to create objects, and is c
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-Abstract factory pattern 
+### Q-Abstract factory pattern ?
 The Abstract Factory pattern is a creational design pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes. This pattern is useful when you want to create multiple objects that are related or dependent on each other, and you want to ensure that they are created in a consistent way.
 
 The Abstract Factory pattern typically consists of the following components:
