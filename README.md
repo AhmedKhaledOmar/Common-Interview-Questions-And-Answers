@@ -2038,7 +2038,7 @@ In summary, C# uses a garbage collector to automatically manage memory, and allo
 </br>
 
 ## **Front end**
-### What is angular ? and life cycle hocks?
+### What is angular ? and what are the life cycle hooks?
 Angular is a popular open-source web application framework used for building complex and dynamic single-page applications. It is developed and maintained by Google and provides a complete solution for building client-side applications, including components, services, routing, and data binding.
 
 Angular has a concept called "lifecycle hooks" that allows you to tap into certain moments in the lifecycle of a component or directive. These hooks enable you to execute your own custom code at specific points in the component or directive's life cycle.
@@ -2066,7 +2066,7 @@ Using lifecycle hooks, you can add behavior to your components or directives at 
 --------------------------------------------------------------------------------------------------------------------------
 </br>
 
-### What is NGRX? and what's it solved ? and state managment ? 
+### What is NGRX? and what did it solve ? and what is state managment ? 
 NGRX is a library for state management in Angular applications, which is inspired by the Redux pattern. It provides a predictable and centralized way of managing application state, making it easier to develop, test, and maintain complex applications.
 
 State management refers to the way an application manages and updates its state or data, including user input, server responses, and other changes. As an application grows in size and complexity, managing state can become challenging, leading to bugs and errors.
@@ -2090,7 +2090,7 @@ In summary, NGRX is a powerful tool for managing application state in Angular ap
 --------------------------------------------------------------------------------------------------------------------------
 </br>
 
-### What is directive  ? 
+### What is a directive  ? 
 In Angular, a directive is a special type of component that allows you to add custom behavior to an existing DOM element, attribute, or component. Directives are used to manipulate the behavior of the DOM, and they are defined using the @Directive decorator.
 
 There are three types of directives in Angular:
@@ -2106,7 +2106,7 @@ Directives are an essential part of Angular, and they allow you to extend the HT
 --------------------------------------------------------------------------------------------------------------------------
 </br>
 
-### What is Pipe  ? 
+### What is a Pipe  ? 
 In Angular, a pipe is a way to transform data in a template before it is displayed to the user. Pipes are defined using the @Pipe decorator and can be used with interpolation {{}} or the ngFor directive.
 
 Pipes allow you to format and transform data in a way that is easy to use and understand. For example, you can use the DatePipe to format a date into a specific format, or the DecimalPipe to format a number with a specific number of decimal places.
