@@ -1696,7 +1696,7 @@ Overall, the Mediator Pattern is a useful pattern for managing complex interacti
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-Facade Pattern?
+### Q-Facade Pattern:
 The Facade pattern is a design pattern in software engineering that provides a simplified interface to a complex system of classes, functions, and interfaces. The purpose of the Facade pattern is to hide the complexity of the system and provide a simple and easy-to-use interface for clients.
 
 The Facade pattern is used when you have a complex system with a large number of components, and you want to provide a simpler interface for clients to use. Instead of exposing all the details of the system, you create a facade that encapsulates the complexity and provides a simplified interface.
@@ -1722,7 +1722,7 @@ In summary, the Facade pattern is a useful design pattern in software engineerin
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-Proxy Pattern?
+### Q-Proxy Pattern:
 The Proxy pattern is a design pattern in software engineering that provides a surrogate or placeholder for another object to control access to it. The purpose of the Proxy pattern is to provide a layer of indirection between clients and an object, allowing for additional functionality to be added without changing the object's interface.
 
 The Proxy pattern is used when you want to control access to an object or add additional functionality to an object's methods without changing the object's interface. The Proxy pattern consists of the following components:
@@ -1762,7 +1762,7 @@ In summary, the main difference between the Proxy pattern and the Facade pattern
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-Observer Pattern?
+### Q-Observer Pattern:
 The Observer pattern is a design pattern in software engineering that allows objects to be notified of changes to the state of other objects without being tightly coupled to them. The purpose of the Observer pattern is to define a one-to-many dependency between objects, so that when one object changes its state, all its dependent objects are notified and updated automatically.
 
 The Observer pattern consists of the following components:
@@ -1786,7 +1786,7 @@ In summary, the Observer pattern is a useful design pattern in software engineer
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-Staretgy pattern
+### Q-Staretgy pattern:
 The Strategy pattern is a behavioral design pattern in object-oriented programming that allows you to define a family of algorithms, encapsulate each one as an object, and make them interchangeable. This pattern enables the behavior of an object to be selected at runtime, without the client code having to know the details of how that behavior is implemented.
 
 The Strategy pattern typically consists of three main components:
@@ -1802,7 +1802,7 @@ By using the Strategy pattern, you can easily switch between different algorithm
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-Factory pattern
+### Q-Factory pattern:
  The Factory pattern is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created. This pattern is useful when you want to create objects without exposing the instantiation logic to the client code, and also when you want to centralize object creation in a single location to simplify the code.
 
 The Factory pattern typically consists of the following components:
@@ -1822,7 +1822,7 @@ Overall, the Factory pattern provides a flexible way to create objects, and is c
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-Abstract factory pattern ?
+### Q-Abstract factory pattern:
 The Abstract Factory pattern is a creational design pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes. This pattern is useful when you want to create multiple objects that are related or dependent on each other, and you want to ensure that they are created in a consistent way.
 
 The Abstract Factory pattern typically consists of the following components:
@@ -1855,7 +1855,7 @@ In summary, architecture refers to the overall structure of a software system, w
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-Onion Architecture?
+### Q-Onion Architecture:
 Onion Architecture is a software architecture pattern that emphasizes separation of concerns and modular design. It was introduced by Jeffrey Palermo in 2008 as an alternative to traditional layered architecture.
 
 In Onion Architecture, the core business logic of the application is encapsulated in the center of the architecture, like the core of an onion, while the outer layers are responsible for interacting with the outside world, such as user interfaces, databases, and external services.
@@ -1877,7 +1877,7 @@ Overall, Onion Architecture is a useful pattern for building scalable, maintaina
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-Layres in onion architecture
+### Q-Layers in onion architecture:
 In Onion Architecture, the layers are organized in a concentric circle around the core, with the innermost layer containing the most important business logic, and the outermost layer containing the least important or infrastructure-related logic. Here are the layers typically used in Onion Architecture:
 
 Core: This is the center of the architecture, where the most important business logic is located. The Core layer is independent of the other layers, and contains the entities, business rules, and interfaces that define the application's behavior.
@@ -1893,7 +1893,7 @@ Overall, the Onion Architecture layers are organized in a way that emphasizes th
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-Clean Architecture?
+### Q-Clean Architecture:
 Clean Architecture is a software architecture pattern that focuses on the separation of concerns and the independence of the business logic from the technical details of the system. It was introduced by Robert C. Martin, also known as Uncle Bob, in 2012 as a way to create modular, maintainable, and testable software systems.
 
 In Clean Architecture, the system is organized into concentric circles, with the innermost circle containing the most important and high-level business logic, and the outermost circle containing the low-level technical details of the system, such as databases, web frameworks, and third-party libraries. The circles are organized in layers, with each layer having its own set of responsibilities and dependencies.
@@ -1913,7 +1913,7 @@ Overall, Clean Architecture is a useful pattern for building software systems th
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-Layres in Clean architecture
+### Q-Layers in Clean architecture:
 
 In Clean Architecture, the layers are organized in a way that emphasizes the separation of concerns and the independence of the business logic from the technical details of the system. Here are the layers typically used in Clean Architecture:
 
@@ -1930,7 +1930,7 @@ Overall, the Clean Architecture layers are organized in a way that emphasizes th
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-What is DDD? (Domain-Driven Design)
+### Q-What is DDD (Domain-Driven Design)?
 DDD stands for Domain-Driven Design, which is an approach to software development that focuses on designing software based on the business domain and its requirements. The main goal of DDD is to create software that reflects the business domain as closely as possible, and to make it easier to understand and maintain.
 
 The key principles of DDD include:
@@ -1974,7 +1974,7 @@ However, microservice architecture also comes with some challenges, such as incr
 --------------------------------------------------------------------------------------------------------------------------
 </br>
 
-###  Microservice Architecture Advanced and disadvanced?
+###  Microservice Architecture Advantages and disadvantages:
 Microservice architecture is a software development approach that involves building a system as a collection of small, independent services that communicate with each other over a network. Here are some advanced and disadvantageous aspects of the microservice architecture:
 
 Advantages:
@@ -2006,8 +2006,8 @@ In summary, the microservices architecture provides many benefits in terms of sc
 --------------------------------------------------------------------------------------------------------------------------
 </br>
 
-## **Software Engineer**
-### Q- Principles ? 
+## **Software Engineering**
+### Q- Principles:
 DRY, KISS, and YAGNI are additional principles that are often used in software development to promote simplicity, maintainability, and productivity.
 
 DRY: Don't Repeat Yourself. This principle states that every piece of knowledge or logic in a system should have a single, authoritative representation. In other words, if there are two or more pieces of code that do the same thing, then they should be refactored into a single reusable component.
@@ -2021,7 +2021,7 @@ Overall, these principles can help developers create more maintainable, efficien
 --------------------------------------------------------------------------------------------------------------------------
 </br>
 
-### Q-Memory managment heap and stack in c#
+### Q-How is Memory managed in the heap and stack in c#?
 In C#, memory is managed by the .NET Framework through a garbage collector. The garbage collector automatically frees memory that is no longer being used by an application.
 
 In C#, there are two main types of memory allocation: stack and heap.
