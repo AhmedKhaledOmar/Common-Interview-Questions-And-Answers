@@ -1555,7 +1555,7 @@ It is important for developers and database administrators to understand the var
 -----------------------------------------------------------------------------------
 </br>
 
-## **Solid Principles:**
+## **Software Engineering:**
 ### What are SOLID Principles? (With)
 SOLID is a set of principles for object-oriented programming that aim to make software systems more maintainable, scalable, and easy to extend. The five SOLID principles are:
 
@@ -1572,6 +1572,36 @@ Dependency Inversion Principle (DIP): This principle states that high-level modu
 Together, these principles promote good design practices that can lead to more maintainable, scalable, and extensible software systems. By following these principles, developers can create code that is easier to understand, modify, and extend over time.
 
 https://www.youtube.com/watch?v=-hbWDYRSjqk&list=PLnqAlQ9hFYdflFSS4NigVB7aSoYPNwHTL 
+
+-----------------------------------------------------------------------------------
+</br>
+
+### Q- Software Engineering Principles:
+DRY, KISS, and YAGNI are additional principles that are often used in software development to promote simplicity, maintainability, and productivity.
+
+DRY: Don't Repeat Yourself. This principle states that every piece of knowledge or logic in a system should have a single, authoritative representation. In other words, if there are two or more pieces of code that do the same thing, then they should be refactored into a single reusable component.
+
+KISS: Keep It Simple, Stupid. This principle states that the simplest solution is often the best one. It encourages developers to prioritize simplicity over complexity and to avoid unnecessary complications in their code.
+
+YAGNI: You Ain't Gonna Need It. This principle states that developers should not add functionality until it is needed. In other words, developers should avoid premature optimization or adding features that are not currently needed in the system.
+
+Overall, these principles can help developers create more maintainable, efficient, and effective software systems. By following DRY, KISS, and YAGNI, developers can reduce code complexity, avoid unnecessary work, and focus on delivering the most valuable features to the end-users.
+
+--------------------------------------------------------------------------------------------------------------------------
+</br>
+
+### Q-How is Memory managed in the heap and stack in c#?
+In C#, memory is managed by the .NET Framework through a garbage collector. The garbage collector automatically frees memory that is no longer being used by an application.
+
+In C#, there are two main types of memory allocation: stack and heap.
+
+The stack is used for storing value types, such as integers, booleans, and enums. The stack is a LIFO (last-in, first-out) data structure that is automatically managed by the runtime. When a value type is created, it is pushed onto the stack. When the method that created the value type exits, the value type is automatically removed from the stack.
+
+The heap is used for storing reference types, such as objects, strings, and arrays. Reference types are created on the heap, and a reference (i.e., a pointer) to the location of the object on the heap is stored on the stack. When an object is no longer being used by an application, the garbage collector will automatically free the memory used by the object.
+
+It's important to note that the heap is much larger than the stack, and is not automatically managed by the runtime. Instead, the garbage collector periodically scans the heap to identify objects that are no longer being used, and frees the memory used by those objects.
+
+In summary, C# uses a garbage collector to automatically manage memory, and allocates value types on the stack and reference types on the heap.
 
 -----------------------------------------------------------------------------------
 </br>
@@ -2002,37 +2032,6 @@ Security: With more services, there are more attack surfaces and more points of 
 Data Consistency: With a microservices architecture, maintaining data consistency across multiple services can be challenging, especially when dealing with complex transactions that involve multiple services.
 
 In summary, the microservices architecture provides many benefits in terms of scalability, agility, resilience, and flexibility, but it also introduces complexity, network latency, operational overhead, security, and data consistency challenges that must be carefully managed.
-
---------------------------------------------------------------------------------------------------------------------------
-</br>
-
-## **Software Engineering**
-### Q- Principles:
-DRY, KISS, and YAGNI are additional principles that are often used in software development to promote simplicity, maintainability, and productivity.
-
-DRY: Don't Repeat Yourself. This principle states that every piece of knowledge or logic in a system should have a single, authoritative representation. In other words, if there are two or more pieces of code that do the same thing, then they should be refactored into a single reusable component.
-
-KISS: Keep It Simple, Stupid. This principle states that the simplest solution is often the best one. It encourages developers to prioritize simplicity over complexity and to avoid unnecessary complications in their code.
-
-YAGNI: You Ain't Gonna Need It. This principle states that developers should not add functionality until it is needed. In other words, developers should avoid premature optimization or adding features that are not currently needed in the system.
-
-Overall, these principles can help developers create more maintainable, efficient, and effective software systems. By following DRY, KISS, and YAGNI, developers can reduce code complexity, avoid unnecessary work, and focus on delivering the most valuable features to the end-users.
-
---------------------------------------------------------------------------------------------------------------------------
-</br>
-
-### Q-How is Memory managed in the heap and stack in c#?
-In C#, memory is managed by the .NET Framework through a garbage collector. The garbage collector automatically frees memory that is no longer being used by an application.
-
-In C#, there are two main types of memory allocation: stack and heap.
-
-The stack is used for storing value types, such as integers, booleans, and enums. The stack is a LIFO (last-in, first-out) data structure that is automatically managed by the runtime. When a value type is created, it is pushed onto the stack. When the method that created the value type exits, the value type is automatically removed from the stack.
-
-The heap is used for storing reference types, such as objects, strings, and arrays. Reference types are created on the heap, and a reference (i.e., a pointer) to the location of the object on the heap is stored on the stack. When an object is no longer being used by an application, the garbage collector will automatically free the memory used by the object.
-
-It's important to note that the heap is much larger than the stack, and is not automatically managed by the runtime. Instead, the garbage collector periodically scans the heap to identify objects that are no longer being used, and frees the memory used by those objects.
-
-In summary, C# uses a garbage collector to automatically manage memory, and allocates value types on the stack and reference types on the heap.
 
 --------------------------------------------------------------------------------------------------------------------------
 </br>
