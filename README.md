@@ -1,7 +1,7 @@
 # Common-Interview-Questions-And-Answers (All Examples using C# language)
 ## **General Topics:**
 -----------------------------------------------------------------------------------
-### Q- What is Casting and type of casting in C#? (With)
+### Q- What is Casting and what are the types of casting in C#? (With)
 Casting is the process of converting a value from one data type to another in C#. There are several types of casting that you can use to convert values:
 
 Implicit Casting: This is when the compiler automatically converts a value from one type to another, if it can be done safely. For example, you can implicitly cast an int to a double, because there is no loss of precision.
@@ -35,13 +35,14 @@ In the above example, we use implicit casting to convert an int to a double, and
 Casting is a powerful tool in C#, but it should be used with care, as it can lead to unexpected results if not used properly. It is important to understand the limitations of each type of casting, and to be mindful of potential data loss or type mismatches when converting values.
 
 -----------------------------------------------------------------------------------
-### Q- object obj = null; (C#) (With)
+### Q- What will happen in each case? (C#) (With)
+### object obj = null;
 ### - int d = (int)obj;
 ### - int d = obj as int ;
 ### - int d = Int64.Parse(obj);
 ### - int d = Int64.TryParse(obj)
 ### - int d = obj is int ;
-### What happend in all this cases ?
+
 In the following code, obj is declared as a null object reference of type object:
 
 <pre>
@@ -61,7 +62,7 @@ int d = obj is int;: This is a type check that returns false, because obj is not
 In general, it's important to be careful when casting, parsing or checking the type of null references, because these operations can throw exceptions or return unexpected results. It's a good practice to check if an object is null before attempting to cast, parse or use it, to avoid null reference exceptions.
 
 -----------------------------------------------------------------------------------
-### Q - What's Ref key and out Key in C# ? (With)
+### Q - What are Ref and out Keywords in C# ? (With)
 In C#, ref and out are keywords that are used to pass arguments by reference in a method call. Here's what each of them does:
 
 ref keyword: The ref keyword is used to pass a parameter by reference to a method. This means that any changes made to the parameter inside the method will be reflected outside the method as well. The variable passed with ref must be initialized before it is passed.
@@ -115,7 +116,7 @@ OOP provides several benefits, including code reusability, encapsulation, and th
 **ْNote** : In short anything in my project I treat it as an object
 
 -----------------------------------------------------------------------------------
-###  Q- What is OOP Types ? (With)
+###  Q- What are OOP Types ? (With)
 In C#, there are four main types of OOP. These are:
 
 1-Abstraction
@@ -157,7 +158,7 @@ Dynamic polymorphism is a powerful feature in OOP that allows developers to crea
 In C#, dynamic polymorphism is achieved through the use of the virtual and override keywords. The base class declares a method as virtual, and the derived class overrides the method by providing its own implementation. When a method call is made on an object of the derived class, the overridden method is called instead of the virtual method defined in the base class
 
 -----------------------------------------------------------------------------------
-### Q - Difference between overloading and override? (With)
+### Q - Difference between method overloading and overriding? (With)
 n C#, both method overloading and method overriding are used to achieve polymorphism, but they are different concepts.
 
 Method overloading is a feature that allows you to define multiple methods with the same name but with different parameters. Overloading a method means defining a method with the same name as an existing method but with a different signature. The method signature includes the method name, parameter types, and the number of parameters. Overloading allows you to create methods that perform similar tasks, but with different input parameters. The method that is called at runtime is determined based on the number, types, and order of the arguments passed to the method.
@@ -210,7 +211,7 @@ To avoid errors during compilation, the compiler checks that the method being ov
 In summary, method overloading is used to create multiple methods with the same name but different parameter types, while method overriding is used to provide a new implementation for a method that is already defined in a base class or an interface. Both concepts are used to achieve polymorphism in C#.
 
 -----------------------------------------------------------------------------------
-### Q - What's Access Modifer?  (With)
+### Q - What are Access Modifers?  (With)
 Access modifiers in C# are keywords that determine the visibility and accessibility of classes, properties, methods, and other members in a program. In C#, there are five access modifiers:
 
 public: Public members are accessible from any part of the program. A public member can be accessed from the same assembly or from a different assembly.
@@ -322,7 +323,7 @@ public class Circle : Shape
 In this example, the Shape class has a protected internal area field and a protected internal virtual CalculateArea method. The Circle class inherits from the Shape class and overrides the CalculateArea method to calculate the area of a circle. The area field is accessible from within the Circle class and any other class within the same assembly, but not from outside the assembly.
 
 -----------------------------------------------------------------------------------
-### Q - What is Non-Access Modifer?  (With)
+### Q - What are Non-Access Modifers?  (With)
 Non-access modifiers are keywords in C# that modify the behavior of classes, methods, and other members in a program, but do not affect their accessibility or visibility. In C#, there are four non-access modifiers:
 
 static: The static modifier is used to create a single instance of a member that can be accessed without creating an instance of the class. Static members belong to the class itself, not to any particular instance of the class.
@@ -397,7 +398,7 @@ public class Rectangle : Shape
 In this example, the Shape class has a virtual Draw method, which has an implementation in the base class. The Circle and Rectangle classes override the Draw method to provide their own implementations.
 
 -----------------------------------------------------------------------------------
-### Q -  new key with method in class ? (With)
+### Q - What is the usage of new keyword with a method in a class ? (With)
 In C#, the new keyword is used to declare a member in a derived class that has the same name as a member in the base class. This is called "hiding" the base class member, and it allows the derived class to have its own implementation of the member that is independent of the base class.
 
 Here's an example:
@@ -432,7 +433,7 @@ myAnimal.Eat(); // Output: The animal is eating.
 </pre>
 
 -----------------------------------------------------------------------------------
-### Q -  Different between access and non-access modifier ? (With)
+### Q -  Difference between access and non-access modifiers ? (With)
 In C#, access modifiers are used to control the accessibility or visibility of classes, methods, fields, properties, and other members in a program, while non-access modifiers modify the behavior of these members without affecting their accessibility.
 
 Access modifiers determine who can access a member and from where, while non-access modifiers determine how a member behaves and what it can do.
@@ -452,7 +453,7 @@ Examples of access modifiers include public, private, protected, and internal. E
 In general, access modifiers are used to control who can access a member, while non-access modifiers are used to modify the behavior of a member. Together, access and non-access modifiers allow developers to control the accessibility and behavior of members in a program, making it easier to create robust and maintainable software.
 
 -----------------------------------------------------------------------------------
-### Q -  When inhertance child class from paret class and override mehthod any method call at first when call parent class or when class child class ? (With)
+### Q -  When a child class inherits from a parent class and overrides a method, Which method will be invoked if we call the overridden method from child class? (With)
 When a child class inherits from a parent class and overrides a method, the method that is called depends on the type of the object that the method is called on. If the object is an instance of the child class, the overridden method in the child class is called. If the object is an instance of the parent class, the method in the parent class is called.
 
 Here's an example:
@@ -493,7 +494,7 @@ myAnimal.Speak(); // Output: The animal makes a sound.
 </pre>
 
 -----------------------------------------------------------------------------------
-### Q -  Different between singelton and static class?
+### Q -  Difference between singelton and static class?
 Singleton and static classes are two different design patterns in C# that are used to create classes that have only one instance in memory. However, they have some differences in implementation and behavior.
 
 A singleton class is a class that can only have one instance in memory at any given time. It is created using a private constructor and a static method to retrieve the single instance. Singleton classes are often used for classes that manage system resources or have global state.
@@ -542,7 +543,7 @@ A singleton class is used to control the creation and access to a single instanc
 It's important to choose the right design pattern based on the needs of your application, as both singleton and static classes have their own benefits and drawbacks.
 
 -----------------------------------------------------------------------------------
-### Q -  Different between interface and abstract? and what's new in C# about it ? (With)
+### Q -  Difference between interface and abstract class? and what's new in C# about interfaces ? (With)
 In C#, interfaces and abstract classes are two different ways to define a contract for derived classes to implement. They have some similarities, but also some important differences.
 
 An interface is a type that defines a set of public methods, properties, events, and indexers that a class must implement. An interface does not provide any implementation details, only the definition of the members that a class must implement. An interface can be used to define a common contract for multiple classes, even if those classes have different base classes.
@@ -576,7 +577,7 @@ In this example, the Shape class is marked as abstract, which means it cannot be
 
 As for what's new in C# about interfaces and abstract classes, in C# 8.0 and later, interfaces can now contain default implementations for methods, which means that you can provide a default implementation for an interface method without forcing all implementing classes to provide their own implementation. Additionally, in C# 9.0 and later, abstract classes can now have implementation for interface members, which means that an abstract class can provide a default implementation for an interface method that derived classes can choose to override or not.
 
-### More About this compare :  
+### More on this comparison :  
 
 Both abstract classes and interfaces are used to define abstract types in object-oriented programming. Here are some of the main differences between them:
 
@@ -594,10 +595,10 @@ In general, abstract classes are used when you want to create a common base clas
 
 It's also worth noting that in some programming languages, such as C#, interfaces can contain default implementations for their methods using default interface methods. This blurs the distinction between interfaces and abstract classes somewhat, but the basic differences outlined above still hold.
 
-**Note** : In last version in C# Interface can contain some implementation.
+**Note** : In last version in C# Interfaces can contain some implementation.
 
 -----------------------------------------------------------------------------------
-### Q - Abstract method and when can I don't implement abstract method until if inherit abstract class ? with c# example?(With)
+### Q - Abstract method and when can I not implement an abstract method in a child class ? with c# example?(With)
 An abstract method is a method that does not have an implementation in the base class, and must be implemented in a derived class. To declare an abstract method in C#, you use the abstract keyword before the method signature, like this:
 
 <pre>
@@ -636,7 +637,7 @@ In this example, MyBaseClass is an abstract class with a non-abstract method DoS
 Note that if you have an abstract method that is not implemented in a derived class, then the derived class must also be declared as an abstract class. If you try to create an instance of a derived class that does not implement all the abstract methods of its base class, you will get a compilation error.
 
 -----------------------------------------------------------------------------------
-### Q - Different between class and struct ? 
+### Q - Difference between class and struct ? 
 In C#, a class and a struct are two different types of user-defined data structures, each with its own characteristics and uses.
 
 Here are some of the main differences between a class and a struct in C#:
@@ -731,7 +732,7 @@ In this example, we use the typeof operator to get the Type object that represen
 This is just a simple example, but Reflection can be used for many other purposes, such as creating objects dynamically, invoking methods dynamically, and more. However, it should be used with caution, as it can have a negative impact on performance and can make code harder to maintain.
 
 -----------------------------------------------------------------------------------
-### Q - What's Constructor? And What's type of Constructor?  (With)
+### Q - What's a Constructor? And What are the types of Constructor?  (With)
 In C#, a constructor is a special method that is called when an object of a class is created. It is used to initialize the object's state by assigning values to its properties and performing any other required setup. The constructor has the same name as the class and does not have a return type.
 
 There are several types of constructors in C#, including:
@@ -801,7 +802,7 @@ public class Singleton
 These are just a few examples of the types of constructors that are available in C#. Constructors are a fundamental part of object-oriented programming, and they are used extensively in building classes and objects.
 
 -----------------------------------------------------------------------------------
-### Q - What's Destructor? 
+### Q - What's a Destructor? 
 In C#, a destructor is a special method that is called automatically when an object is about to be destroyed. It is used to perform any cleanup or finalization that is required before the object is removed from memory.
 
 A destructor is declared in a class using the tilde (~) symbol followed by the class name. It is called automatically by the garbage collector when the object is no longer referenced by any other part of the program. Unlike a constructor, a destructor cannot be called directly.
@@ -826,7 +827,7 @@ In this example, the constructor is called when an object of the class is create
 It's important to note that the use of destructors in C# is generally discouraged, as they can introduce unnecessary complexity and make it harder to manage memory and resources. Instead, it is generally recommended to use the IDisposable interface and the Dispose() method to perform cleanup and finalization.
 
 -----------------------------------------------------------------------------------
-### Q -What's Different between destructor and Finilize and Finally?
+### Q -What's the difference between destructor and finalize method and finally block?
 In C#, a destructor, finalize method, and finally block are three different constructs that serve different purposes. Here is a brief explanation of each of them:
 
 Destructor:
@@ -845,17 +846,8 @@ public class MyClass
 Finalize method:
 The finalize method is a method that is called by the GC before an object is garbage collected. Like a destructor, the purpose of the finalize method is to release any unmanaged resources that the object may be holding. However, the finalize method is not guaranteed to be called, and its timing is non-deterministic.
 
-Here's an example of a finalize method in C#:
-<pre>
-public class MyClass
-{
-    ~MyClass()
-    {
-        // Release unmanaged resources
-    }
-}
-</pre>
-Finally block:
+Note: The C# compiler does not allow you to override the Finalize method. Instead, you provide a finalizer by implementing a destructor for your class.
+Finally Block:
 The finally block is a block of code that is guaranteed to be executed, regardless of whether an exception is thrown or not. The purpose of the finally block is to release any resources that may have been acquired in a try block.
 
 Here's an example of a finally block in C#:
@@ -876,7 +868,7 @@ finally
 In summary, while all three constructs deal with releasing resources, a destructor is used for objects and is called automatically by the GC, a finalize method is also used for objects, but is not guaranteed to be called, and a finally block is used for exception handling and is guaranteed to be executed.
 
 -----------------------------------------------------------------------------------
-### Q - What'S Garbge collector? (With)
+### Q - What is the Garbge collector? (With)
 Garbage Collector (GC) is a feature in many modern programming languages, including C#, Java, and Python, which automatically manages memory allocation and deallocation for an application. The purpose of the GC is to free the developer from the burden of manually managing memory, which can be error-prone and time-consuming.
 
 The GC works by periodically scanning the heap (the memory space where objects are stored) to identify objects that are no longer being used by the application. These objects are marked as garbage and are eligible for collection. When the GC runs, it frees the memory occupied by the garbage objects and returns it to the system.
@@ -888,7 +880,7 @@ Although the GC is generally reliable, it's important to note that it's not perf
 Overall, the GC is a powerful tool that simplifies memory management for developers and reduces the risk of memory leaks and other memory-related issues
 
 -----------------------------------------------------------------------------------
-### Q - What'S seald class? (With)
+### Q - What's a seald class? (With)
 In C#, a sealed class is a class that cannot be inherited by other classes. Once a class is marked as sealed, it can no longer serve as a base class for any other class.
 
 Here's an example of a sealed class in C#:
@@ -910,7 +902,7 @@ Sealing a class is often done for performance reasons, as it allows the compiler
 It's worth noting that although a sealed class cannot be inherited, it can still implement interfaces, and it can still contain virtual methods that can be overridden by its own members.
 
 -----------------------------------------------------------------------------------
-### Q - What's Virtual Key? (With)
+### Q - What's a virtual key? (With)
 In C#, a virtual key is a code that represents a physical key on a keyboard. Virtual keys are used to enable the processing of user input, such as keystrokes, mouse clicks, and touch events.
 
 <pre>
@@ -959,7 +951,7 @@ In this example, we use the Keys enumeration to compare the KeyPressEventArgs.Ke
 
 
 -----------------------------------------------------------------------------------
-### Q - Different between ienumerable and iqueryable ?   (With)(With)(With)(With)(With)(With)(With)(With)(With)(With)
+### Q - Difference between IEnumerable and IQueryable ?   (With)
 In C#, IEnumerable and IQueryable are two interfaces that are commonly used with LINQ (Language-Integrated Query) to query and manipulate data. While both interfaces are used to represent a collection of data, they have some key differences in terms of their behavior and performance characteristics.
 
 IEnumerable is the simpler of the two interfaces, and it is used to represent a sequence of data that can be enumerated. It defines a single method, GetEnumerator(), which returns an enumerator that can be used to iterate over the sequence.
@@ -993,7 +985,7 @@ In this example, we use an IQueryable<Product> collection to query a database of
 The main advantage of using IQueryable over IEnumerable is that it allows queries to be executed on the server side, rather than fetching all the data and filtering it on the client side. This can result in significant performance gains for large datasets. However, it's important to note that not all LINQ providers support IQueryable, so it may not be available in all scenarios.
 
 -----------------------------------------------------------------------------------
-### Q - What's record in C# 9?
+### Q - What's a record in C# 9?
 C# 9 introduces a new feature called records, which are a simplified way to define classes that are primarily used to store data. Records provide a concise syntax for defining immutable objects with value semantics, and they can be used to reduce boilerplate code and improve the readability of your code.
 
 Here's an example of how to define a record in C# 9:
@@ -1020,7 +1012,7 @@ Console.WriteLine(person2); // Person { FirstName = John, LastName = Doe, Age = 
 Overall, records are a powerful and convenient way to define simple classes that are primarily used to store data. They provide many features and benefits out-of-the-box, which can reduce the amount of boilerplate code you need to write and make your code more concise and readable.
 
 -----------------------------------------------------------------------------------
-### Q - What's different between class and record in C# 9 ?
+### Q - What's the Difference between class and record in C# 9 ?
 In C# 9, records are a new feature that provides a simplified syntax for defining classes that are primarily used to store data. While records share many similarities with classes, there are some key differences between the two.
 
 Here are some of the main differences between classes and records in C# 9:
@@ -1038,7 +1030,7 @@ Reference types: Classes are reference types, which means that their instances a
 Overall, while records share many similarities with classes, they are primarily designed for modeling data that is not meant to be modified and can provide a more concise and readable way to define simple data structures. However, classes still have many advantages and may be more appropriate for more complex scenarios.
 
 -----------------------------------------------------------------------------------
-### Q - What is delegate and experssion in C# and how to use it?
+### Q - What is a delegate and an experssion in C# and how to use it?
 In C#, a delegate is a type that represents a method signature. It can be used to reference methods as objects and pass them as parameters to other methods. An expression is a way of writing code that evaluates to a value. In C#, expressions can be used in a variety of contexts, such as assignment statements, method calls, and conditional statements.
 
 Here's an example of using a delegate and expression in C#:
@@ -1091,11 +1083,10 @@ We then print the value of result to the console again. The output should be the
 <pre>
 Result = 15
 </pre>
-This example demonstrates how delegates and expressions can be used to encapsulate method calls and evaluate code at runtime. Delegates can be used to pass methods as parameters to other methods, while expressions can be used to define code that evaluates to a 
-value.
+This example demonstrates how delegates and expressions can be used to encapsulate method calls and evaluate code at runtime. Delegates can be used to pass methods as parameters to other methods, while expressions can be used to define code that evaluates to a value.
 
 ---------------------------------------------------------------------------------------
-### Q- Different between Pass by refrence and pass by value? (With)
+### Q- Difference between Pass by refrence and pass by value? (With)
 In C#, when passing an argument to a method, it can be done in two ways: "pass by reference" and "pass by value".
 
 When an argument is passed by value, a copy of the argument is created and passed to the method, leaving the original argument unchanged. When an argument is passed by reference, a reference to the original argument is passed to the method, allowing the method to modify the original argument.
@@ -1131,7 +1122,7 @@ static void IncrementByRef(ref int b) {
 In this example, the method IncrementByRef takes an integer argument b by reference, indicated by the ref keyword. The Main method initializes an integer a to 5 and calls the IncrementByRef method, passing in a with the ref keyword. When IncrementByRef is called, a reference to the original value of a is passed to the method. b is then incremented by 1, modifying the original value of a. When the program prints a to the console, it now outputs 6.
 
 -----------------------------------------------------------------------------------
-### Q- When equal refrence object to refrence object and same in case value?
+### Q- What is the difference between assigning a reference type to another reference type and assigning a value type to another value type?
 When working with objects in C#, it is important to understand the difference between reference types and value types.
 
 Reference types are types that are stored in memory as a reference to an object, rather than as the actual value of the object. When you create a new instance of a reference type, a new object is created in memory, and a reference to that object is returned. Any variables that reference the same object will have the same value.
@@ -1185,12 +1176,12 @@ In general, the choice between lazy loading and eager loading depends on the spe
 -----------------------------------------------------------------------------------
 </br>
 
-### Q- Different between this Quires: (With)
+### Q- Difference between these statements: (With)
 #### - Delete and drop 
-#### - Drop and trunke  
+#### - Drop and truncate 
 #### - Where and having  
-#### - Join and Unoin  
-#### - UnUnion and Unoin  
+#### - Join and Union
+#### - Union and Union All
 #### - Not in and Not exist   
 #### - What is DISTINCT  
 Delete and drop:
@@ -1223,7 +1214,7 @@ DISTINCT is a keyword used to remove duplicates from a result set. It is used in
 -----------------------------------------------------------------------------------
 </br>
 
-### What is Index? 
+### What is an Index? 
 In the context of databases, an index is a data structure that is used to improve the speed of data retrieval operations on a table. An index can be thought of as a pointer to the location of data within a table, similar to the index at the back of a book that allows you to quickly find a specific page.
 
 An index is created on one or more columns of a table and contains a sorted copy of the data in those columns, along with a pointer to the location of each row in the table that contains that data. When a query is executed that involves the indexed columns, the database can use the index to quickly find the rows that match the query criteria, rather than having to scan the entire table.
@@ -1235,7 +1226,7 @@ In general, it is recommended to create indexes on columns that are frequently u
 -----------------------------------------------------------------------------------
 </br>
 
-### Index Advanced? (With)
+### What is advanced indexing? (With)
 Advanced indexing is a technique used in databases to optimize queries that involve multiple conditions or complex expressions. Advanced indexing typically involves creating composite indexes, which are indexes that are created on multiple columns instead of just one.
 
 Composite indexes are useful in situations where queries involve multiple conditions or expressions that reference different columns in a table. By creating an index that includes all of the relevant columns, the database can quickly locate the rows that match the query criteria, without having to scan the entire table.
@@ -1253,7 +1244,7 @@ Overall, advanced indexing techniques are an important tool for optimizing datab
 -----------------------------------------------------------------------------------
 </br>
 
-### Index disadvanced? (With)
+### What are index disadvantages? (With)
 While indexes can provide significant performance benefits for queries, they can also have some disadvantages, including:
 
 Increased storage requirements: Indexes require additional storage space to store the index data structures, which can be a significant consideration for large tables.
@@ -1283,7 +1274,7 @@ When a query is executed that involves the indexed column(s), the database can u
 -----------------------------------------------------------------------------------
 </br>
 
-### Clusterd Index advanced and disadvanced ? (With)
+### What are Clusterd Index advantages and disadvantages ? (With)
 Clustered indexes have some advantages and disadvantages compared to non-clustered indexes. Here are some of the advanced and disadvantaged of clustered indexes:
 
 #### Advantages:
@@ -1309,7 +1300,7 @@ Overall, clustered indexes can provide significant performance benefits for cert
 -----------------------------------------------------------------------------------
 </br>
  
-### Non-Clusterd Index advanced and disadvanced ? (With)
+### What are Non-Clusterd Index advantages and disadvantages ? (With)
 Non-clustered indexes also have some advantages and disadvantages compared to clustered indexes. Here are some of the advanced and disadvantaged of non-clustered indexes:
 
 #### Advantages:
@@ -1354,7 +1345,7 @@ Normalization is important because it helps ensure that data is consistent and a
 -----------------------------------------------------------------------------------
 </br>
 
-### Q- What is stored procuder and when used it ?
+### Q- What is a stored procedure and when to use it ?
 A stored procedure is a precompiled collection of SQL statements that are stored in a database and can be executed as a single unit. Stored procedures are used to encapsulate frequently used database operations, such as inserting, updating, and retrieving data, into reusable code that can be called from multiple applications or client programs.
 
 Stored procedures offer several advantages over ad hoc SQL statements:
@@ -1391,7 +1382,7 @@ This would return a list of all customers with the last name "Smith". You can al
 -----------------------------------------------------------------------------------
 </br>
 
-### Q- What is Function and when used it ?
+### Q- What is a Function and when to use it ?
 In SQL, a function is a prewritten code block that can be called to perform a specific task. Functions are similar to stored procedures, but they return a value or a table rather than executing a series of statements.
 
 Functions are useful in situations where you need to perform a specific calculation or transformation on a set of data, and want to reuse that code across multiple queries or applications.
@@ -1429,7 +1420,7 @@ This would also return the value 5. Functions can be used in a wide variety of s
 -----------------------------------------------------------------------------------
 </br>
 
-### Q- Stored procuder vs Function ?
+### Q- Stored procedures vs Functions ?
 Stored procedures and functions are both prewritten code blocks in SQL, but they differ in their purpose and usage.
 
 Stored procedures are used to encapsulate a series of SQL statements or operations into a reusable code block that can be called from multiple applications or client programs. Stored procedures can have input and output parameters, and can return multiple result sets or update data in the database.
@@ -1451,7 +1442,7 @@ In general, stored procedures are used for more complex database operations, whi
 -----------------------------------------------------------------------------------
 </br>
 
-### Q- What is constraint?
+### Q- What is a constraint?
 In SQL, a constraint is a rule or restriction that is applied to a table column or a group of columns. Constraints help to ensure data integrity and consistency by preventing invalid or inconsistent data from being inserted or updated in the table.
 
 Here are some commonly used constraints in SQL:
@@ -1471,7 +1462,7 @@ Constraints can be defined when a table is created, or they can be added later u
 -----------------------------------------------------------------------------------
 </br>
 
-### Q- What is Trigger?
+### Q- What is a Trigger?
 In SQL, a trigger is a special type of stored procedure that is automatically executed in response to certain database events, such as an insert, update, or delete operation on a table. Triggers can be used to enforce business rules, audit changes to data, or perform complex data transformations.
 
 Triggers are defined on a specific table or view, and are automatically executed before or after the database operation that triggers them. For example, a trigger can be defined to execute before an insert operation, to validate the data being inserted and enforce certain business rules. Similarly, a trigger can be defined to execute after an update operation, to perform some additional data transformation or to update other tables in the database.
@@ -1520,7 +1511,7 @@ In this example, the CTE sales_by_region is defined as the total sales by region
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-What is View?
+### Q-What is a View?
 In SQL, a view is a virtual table that is defined by a SQL query. Unlike physical tables, views do not contain any data themselves, but instead provide a way to query and present data from one or more underlying tables or views.
 
 Views can be used to simplify complex queries by providing a pre-defined subset of data that is tailored to a specific use case or application. For example, a view could be created to show only the most recent orders from a customer, or to summarize sales data by region or product category.
@@ -1541,7 +1532,7 @@ In this example, a view called customer_orders is created that joins the custome
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-What is isolations levels?
+### Q-What are isolation levels?
 
 In database management systems, isolation levels are a set of rules that determine how transactions interact with each other and with the underlying data. Isolation levels define the degree to which one transaction must be isolated from other transactions and how the changes made by one transaction can be seen by other transactions.
 
@@ -1564,8 +1555,8 @@ It is important for developers and database administrators to understand the var
 -----------------------------------------------------------------------------------
 </br>
 
-## **Solid Principle:**
-### What's SOLID principle? (With)
+## **Software Engineering:**
+### What are SOLID Principles? (With)
 SOLID is a set of principles for object-oriented programming that aim to make software systems more maintainable, scalable, and easy to extend. The five SOLID principles are:
 
 Single Responsibility Principle (SRP): This principle states that a class should have only one reason to change. In other words, a class should have only one responsibility, and any change to that responsibility should require only one change to the class.
@@ -1585,16 +1576,46 @@ https://www.youtube.com/watch?v=-hbWDYRSjqk&list=PLnqAlQ9hFYdflFSS4NigVB7aSoYPNw
 -----------------------------------------------------------------------------------
 </br>
 
+### Q- Software Engineering Principles:
+DRY, KISS, and YAGNI are additional principles that are often used in software development to promote simplicity, maintainability, and productivity.
+
+DRY: Don't Repeat Yourself. This principle states that every piece of knowledge or logic in a system should have a single, authoritative representation. In other words, if there are two or more pieces of code that do the same thing, then they should be refactored into a single reusable component.
+
+KISS: Keep It Simple, Stupid. This principle states that the simplest solution is often the best one. It encourages developers to prioritize simplicity over complexity and to avoid unnecessary complications in their code.
+
+YAGNI: You Ain't Gonna Need It. This principle states that developers should not add functionality until it is needed. In other words, developers should avoid premature optimization or adding features that are not currently needed in the system.
+
+Overall, these principles can help developers create more maintainable, efficient, and effective software systems. By following DRY, KISS, and YAGNI, developers can reduce code complexity, avoid unnecessary work, and focus on delivering the most valuable features to the end-users.
+
+--------------------------------------------------------------------------------------------------------------------------
+</br>
+
+### Q-How is Memory managed in the heap and stack in c#?
+In C#, memory is managed by the .NET Framework through a garbage collector. The garbage collector automatically frees memory that is no longer being used by an application.
+
+In C#, there are two main types of memory allocation: stack and heap.
+
+The stack is used for storing value types, such as integers, booleans, and enums. The stack is a LIFO (last-in, first-out) data structure that is automatically managed by the runtime. When a value type is created, it is pushed onto the stack. When the method that created the value type exits, the value type is automatically removed from the stack.
+
+The heap is used for storing reference types, such as objects, strings, and arrays. Reference types are created on the heap, and a reference (i.e., a pointer) to the location of the object on the heap is stored on the stack. When an object is no longer being used by an application, the garbage collector will automatically free the memory used by the object.
+
+It's important to note that the heap is much larger than the stack, and is not automatically managed by the runtime. Instead, the garbage collector periodically scans the heap to identify objects that are no longer being used, and frees the memory used by those objects.
+
+In summary, C# uses a garbage collector to automatically manage memory, and allocates value types on the stack and reference types on the heap.
+
+-----------------------------------------------------------------------------------
+</br>
+
 ## **Design patterns:**
-### Q- What's Design Pattern? (With)
+### Q- What's a Design Pattern? (With)
 A design pattern is a general reusable solution to a commonly occurring problem within a particular context in software design. It is a description or template for how to solve a particular problem that can be adapted and reused in different situations. Design patterns are like templates or blueprints for building software that help developers solve common problems in an efficient and effective way.
 
 Design patterns can be categorized into three main groups: creational, structural, and behavioral. Creational patterns are concerned with object creation mechanisms, trying to create objects in a manner suitable to the situation. Structural patterns deal with object composition, forming class hierarchies, and defining how objects are composed to form larger structures. Behavioral patterns are concerned with communication between objects, encapsulating behaviors and interactions between objects.
 
 The use of design patterns can provide several benefits, such as reducing the time and effort needed to solve common problems, improving code readability and maintainability, facilitating communication between team members, and promoting code reusability. There are many well-known design patterns, such as the Singleton pattern, Factory pattern, Observer pattern, Decorator pattern, and many more.
-<small>
+
 By understanding and applying design patterns, developers can create more robust, maintainable, and extensible software that can better meet the needs of their users. However, it's important to note that design patterns should be used judiciously and only where appropriate. Overuse or misuse of design patterns can lead to unnecessarily complex and difficult-to-maintain code.
-</small>
+
 -----------------------------------------------------------------------------------
 </br>
 
@@ -1611,7 +1632,6 @@ Overall, the repository pattern is a widely used approach that promotes separati
 </br>
 
 ### Q- What's Unit of work Pattern?
--Unit of work Pattern : 
 
 The Unit of Work Pattern is a design pattern used in software engineering to manage database transactions and simplify the interaction between the application's business logic and the data access layer.
 
@@ -1648,7 +1668,7 @@ Overall, Dependency Injection is a powerful tool for creating more modular, test
 [https://www.youtube.com/watch?v=YO4MGNu2xvI](https://www.youtube.com/watch?v=YO4MGNu2xvI)
 
 
-#### Three ways to implement Dependency injection ? 
+#### What are the different scopes and lifetimes of dependencies in Dependency Injection ? 
 To add Dependency Injection (DI) to a program file, you typically need to follow these general steps:
 Identify the dependencies of your class or component. This includes any external objects, libraries, or services that are needed for the class to function.
 Create an interface or abstraction for the dependencies, if needed. This allows for more flexibility in substituting different implementations of the dependencies later on.
@@ -1706,7 +1726,7 @@ Overall, the Mediator Pattern is a useful pattern for managing complex interacti
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-Facade Pattern?
+### Q-Facade Pattern:
 The Facade pattern is a design pattern in software engineering that provides a simplified interface to a complex system of classes, functions, and interfaces. The purpose of the Facade pattern is to hide the complexity of the system and provide a simple and easy-to-use interface for clients.
 
 The Facade pattern is used when you have a complex system with a large number of components, and you want to provide a simpler interface for clients to use. Instead of exposing all the details of the system, you create a facade that encapsulates the complexity and provides a simplified interface.
@@ -1732,7 +1752,7 @@ In summary, the Facade pattern is a useful design pattern in software engineerin
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-Proxy Pattern?
+### Q-Proxy Pattern:
 The Proxy pattern is a design pattern in software engineering that provides a surrogate or placeholder for another object to control access to it. The purpose of the Proxy pattern is to provide a layer of indirection between clients and an object, allowing for additional functionality to be added without changing the object's interface.
 
 The Proxy pattern is used when you want to control access to an object or add additional functionality to an object's methods without changing the object's interface. The Proxy pattern consists of the following components:
@@ -1758,7 +1778,7 @@ In summary, the Proxy pattern is a useful design pattern in software engineering
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-Different between Proxy Pattern and Facade Pattern?
+### Q-Difference between Proxy Pattern and Facade Pattern?
 Although both the Proxy pattern and the Facade pattern provide a layer of abstraction between the client and an underlying system, they serve different purposes.
 
 The Facade pattern provides a simplified interface to a complex system, while the Proxy pattern provides a surrogate or placeholder for another object to control access to it.
@@ -1772,7 +1792,7 @@ In summary, the main difference between the Proxy pattern and the Facade pattern
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-Observal Pattern?
+### Q-Observer Pattern:
 The Observer pattern is a design pattern in software engineering that allows objects to be notified of changes to the state of other objects without being tightly coupled to them. The purpose of the Observer pattern is to define a one-to-many dependency between objects, so that when one object changes its state, all its dependent objects are notified and updated automatically.
 
 The Observer pattern consists of the following components:
@@ -1796,7 +1816,7 @@ In summary, the Observer pattern is a useful design pattern in software engineer
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-Staretgy pattern
+### Q-Staretgy pattern:
 The Strategy pattern is a behavioral design pattern in object-oriented programming that allows you to define a family of algorithms, encapsulate each one as an object, and make them interchangeable. This pattern enables the behavior of an object to be selected at runtime, without the client code having to know the details of how that behavior is implemented.
 
 The Strategy pattern typically consists of three main components:
@@ -1812,7 +1832,7 @@ By using the Strategy pattern, you can easily switch between different algorithm
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-Factory pattern
+### Q-Factory pattern:
  The Factory pattern is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created. This pattern is useful when you want to create objects without exposing the instantiation logic to the client code, and also when you want to centralize object creation in a single location to simplify the code.
 
 The Factory pattern typically consists of the following components:
@@ -1832,7 +1852,7 @@ Overall, the Factory pattern provides a flexible way to create objects, and is c
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-Abstract factory pattern 
+### Q-Abstract factory pattern:
 The Abstract Factory pattern is a creational design pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes. This pattern is useful when you want to create multiple objects that are related or dependent on each other, and you want to ensure that they are created in a consistent way.
 
 The Abstract Factory pattern typically consists of the following components:
@@ -1853,7 +1873,7 @@ Overall, the Abstract Factory pattern provides a flexible way to create families
 </br>
 
 ## **Software Architecture**
-### Q-Different between Architecture and design pattern?
+### Q-Difference between Architecture and design pattern?
 Architecture and design patterns are related concepts in software development, but they refer to different things.
 
 Architecture refers to the overall structure of a software system, including its components, their interactions, and how they are organized to achieve specific goals. Architecture defines the high-level decisions that determine how the system will be built and how it will operate. Examples of software architectures include client-server, microservices, and event-driven architectures.
@@ -1865,7 +1885,7 @@ In summary, architecture refers to the overall structure of a software system, w
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-Onion Architecture?
+### Q-Onion Architecture:
 Onion Architecture is a software architecture pattern that emphasizes separation of concerns and modular design. It was introduced by Jeffrey Palermo in 2008 as an alternative to traditional layered architecture.
 
 In Onion Architecture, the core business logic of the application is encapsulated in the center of the architecture, like the core of an onion, while the outer layers are responsible for interacting with the outside world, such as user interfaces, databases, and external services.
@@ -1887,7 +1907,7 @@ Overall, Onion Architecture is a useful pattern for building scalable, maintaina
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-Layres in onion architecture
+### Q-Layers in onion architecture:
 In Onion Architecture, the layers are organized in a concentric circle around the core, with the innermost layer containing the most important business logic, and the outermost layer containing the least important or infrastructure-related logic. Here are the layers typically used in Onion Architecture:
 
 Core: This is the center of the architecture, where the most important business logic is located. The Core layer is independent of the other layers, and contains the entities, business rules, and interfaces that define the application's behavior.
@@ -1903,7 +1923,7 @@ Overall, the Onion Architecture layers are organized in a way that emphasizes th
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-Clean Architecture?
+### Q-Clean Architecture:
 Clean Architecture is a software architecture pattern that focuses on the separation of concerns and the independence of the business logic from the technical details of the system. It was introduced by Robert C. Martin, also known as Uncle Bob, in 2012 as a way to create modular, maintainable, and testable software systems.
 
 In Clean Architecture, the system is organized into concentric circles, with the innermost circle containing the most important and high-level business logic, and the outermost circle containing the low-level technical details of the system, such as databases, web frameworks, and third-party libraries. The circles are organized in layers, with each layer having its own set of responsibilities and dependencies.
@@ -1923,7 +1943,7 @@ Overall, Clean Architecture is a useful pattern for building software systems th
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-Layres in Clean architecture
+### Q-Layers in Clean architecture:
 
 In Clean Architecture, the layers are organized in a way that emphasizes the separation of concerns and the independence of the business logic from the technical details of the system. Here are the layers typically used in Clean Architecture:
 
@@ -1940,7 +1960,7 @@ Overall, the Clean Architecture layers are organized in a way that emphasizes th
 -----------------------------------------------------------------------------------
 </br>
 
-### Q-What is DDD? (Domain-Driven Design)
+### Q-What is DDD (Domain-Driven Design)?
 DDD stands for Domain-Driven Design, which is an approach to software development that focuses on designing software based on the business domain and its requirements. The main goal of DDD is to create software that reflects the business domain as closely as possible, and to make it easier to understand and maintain.
 
 The key principles of DDD include:
@@ -1984,7 +2004,7 @@ However, microservice architecture also comes with some challenges, such as incr
 --------------------------------------------------------------------------------------------------------------------------
 </br>
 
-###  Microservice Architecture Advanced and disadvanced?
+###  Microservice Architecture Advantages and disadvantages:
 Microservice architecture is a software development approach that involves building a system as a collection of small, independent services that communicate with each other over a network. Here are some advanced and disadvantageous aspects of the microservice architecture:
 
 Advantages:
@@ -2016,39 +2036,8 @@ In summary, the microservices architecture provides many benefits in terms of sc
 --------------------------------------------------------------------------------------------------------------------------
 </br>
 
-## **Software Engineer**
-### Q- Principles ? 
-DRY, KISS, and YAGNI are additional principles that are often used in software development to promote simplicity, maintainability, and productivity.
-
-DRY: Don't Repeat Yourself. This principle states that every piece of knowledge or logic in a system should have a single, authoritative representation. In other words, if there are two or more pieces of code that do the same thing, then they should be refactored into a single reusable component.
-
-KISS: Keep It Simple, Stupid. This principle states that the simplest solution is often the best one. It encourages developers to prioritize simplicity over complexity and to avoid unnecessary complications in their code.
-
-YAGNI: You Ain't Gonna Need It. This principle states that developers should not add functionality until it is needed. In other words, developers should avoid premature optimization or adding features that are not currently needed in the system.
-
-Overall, these principles can help developers create more maintainable, efficient, and effective software systems. By following DRY, KISS, and YAGNI, developers can reduce code complexity, avoid unnecessary work, and focus on delivering the most valuable features to the end-users.
-
---------------------------------------------------------------------------------------------------------------------------
-</br>
-
-### Q-Memory managment heap and stack in c#
-In C#, memory is managed by the .NET Framework through a garbage collector. The garbage collector automatically frees memory that is no longer being used by an application.
-
-In C#, there are two main types of memory allocation: stack and heap.
-
-The stack is used for storing value types, such as integers, booleans, and enums. The stack is a LIFO (last-in, first-out) data structure that is automatically managed by the runtime. When a value type is created, it is pushed onto the stack. When the method that created the value type exits, the value type is automatically removed from the stack.
-
-The heap is used for storing reference types, such as objects, strings, and arrays. Reference types are created on the heap, and a reference (i.e., a pointer) to the location of the object on the heap is stored on the stack. When an object is no longer being used by an application, the garbage collector will automatically free the memory used by the object.
-
-It's important to note that the heap is much larger than the stack, and is not automatically managed by the runtime. Instead, the garbage collector periodically scans the heap to identify objects that are no longer being used, and frees the memory used by those objects.
-
-In summary, C# uses a garbage collector to automatically manage memory, and allocates value types on the stack and reference types on the heap.
-
---------------------------------------------------------------------------------------------------------------------------
-</br>
-
 ## **Front end**
-### What is angular ? and life cycle hocks?
+### What is angular ? and what are the life cycle hooks?
 Angular is a popular open-source web application framework used for building complex and dynamic single-page applications. It is developed and maintained by Google and provides a complete solution for building client-side applications, including components, services, routing, and data binding.
 
 Angular has a concept called "lifecycle hooks" that allows you to tap into certain moments in the lifecycle of a component or directive. These hooks enable you to execute your own custom code at specific points in the component or directive's life cycle.
@@ -2076,7 +2065,7 @@ Using lifecycle hooks, you can add behavior to your components or directives at 
 --------------------------------------------------------------------------------------------------------------------------
 </br>
 
-### What is NGRX? and what's it solved ? and state managment ? 
+### What is NGRX? and what did it solve ? and what is state managment ? 
 NGRX is a library for state management in Angular applications, which is inspired by the Redux pattern. It provides a predictable and centralized way of managing application state, making it easier to develop, test, and maintain complex applications.
 
 State management refers to the way an application manages and updates its state or data, including user input, server responses, and other changes. As an application grows in size and complexity, managing state can become challenging, leading to bugs and errors.
@@ -2100,7 +2089,7 @@ In summary, NGRX is a powerful tool for managing application state in Angular ap
 --------------------------------------------------------------------------------------------------------------------------
 </br>
 
-### What is directive  ? 
+### What is a directive  ? 
 In Angular, a directive is a special type of component that allows you to add custom behavior to an existing DOM element, attribute, or component. Directives are used to manipulate the behavior of the DOM, and they are defined using the @Directive decorator.
 
 There are three types of directives in Angular:
@@ -2116,7 +2105,7 @@ Directives are an essential part of Angular, and they allow you to extend the HT
 --------------------------------------------------------------------------------------------------------------------------
 </br>
 
-### What is Pipe  ? 
+### What is a Pipe  ? 
 In Angular, a pipe is a way to transform data in a template before it is displayed to the user. Pipes are defined using the @Pipe decorator and can be used with interpolation {{}} or the ngFor directive.
 
 Pipes allow you to format and transform data in a way that is easy to use and understand. For example, you can use the DatePipe to format a date into a specific format, or the DecimalPipe to format a number with a specific number of decimal places.
