@@ -61,7 +61,7 @@
 
 
 # Common-Interview-Questions-And-Answers (All Examples using C# language)
-[Dolite Interview.txt](https://github.com/user-attachments/files/23354275/Dolite.Interview.txt)
+
 ## **General Topics:**
 -----------------------------------------------------------------------------------
 ### Q- What is Casting and what are the types of casting in C#? (With)
