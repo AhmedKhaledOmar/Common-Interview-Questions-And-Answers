@@ -119,7 +119,7 @@ OOP provides several benefits, including code reusability, encapsulation, and th
 **ْNote** : In short anything in my project I treat it as an object
 
 -----------------------------------------------------------------------------------
-###  Q- What are OOP Types ? (With)
+###  Q- What are OOP pillar ? (With)
 In C#, there are four main types of OOP. These are:
 
 1-Abstraction
